@@ -4764,7 +4764,7 @@ __webpack_require__.r(__webpack_exports__);
     login: function login() {
       var _this = this;
 
-      var btn_content = 'processing <i class="fa fa-spinner fa-spin fa-1x fa-fw"></i>';
+      var btn_content = Lang.get('coreui.auth.processing') + '<i class="fa fa-spinner fa-spin fa-1x fa-fw"></i>';
       document.getElementById('btn-login').innerHTML = btn_content;
       axios.post(route('login'), {
         email: this.user.email,
@@ -4775,7 +4775,7 @@ __webpack_require__.r(__webpack_exports__);
         }, 3000);
       })["catch"](function (error) {
         _this.errors = error.response.data.errors;
-        document.getElementById('btn-login').innerHTML = 'Login';
+        document.getElementById('btn-login').innerHTML = Lang.get('coreui.auth.login_button');
       });
     }
   }
@@ -41746,7 +41746,7 @@ var render = function() {
           class: [
             _vm.errors.email ? "form-control is-invalid" : "form-control"
           ],
-          attrs: { type: "text", placeholder: "E-mail address" },
+          attrs: { type: "text", placeholder: "" },
           domProps: { value: _vm.user.email },
           on: {
             input: function($event) {
@@ -41784,7 +41784,7 @@ var render = function() {
           class: [
             _vm.errors.password ? "form-control is-invalid" : "form-control"
           ],
-          attrs: { type: "password", placeholder: "Password" },
+          attrs: { type: "password", placeholder: "" },
           domProps: { value: _vm.user.password },
           on: {
             input: function($event) {
@@ -41837,14 +41837,10 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "form-group" }, [
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-primary btn-block px-4 btn-square",
-          attrs: { type: "submit", id: "btn-login" }
-        },
-        [_vm._v("\n            Login\n        ")]
-      )
+      _c("button", {
+        staticClass: "btn btn-primary btn-block px-4 btn-square",
+        attrs: { type: "submit", id: "btn-login" }
+      })
     ])
   }
 ]
