@@ -3,9 +3,10 @@
 @section('content')
     <div class="col-md-4">
         <div class="card">
+            <div class="card-header">
+                <strong>@lang('labels.frontend.passwords.reset_password_box_title')</strong>
+            </div>
             <div class="card-body">
-                <h3>@lang('coreui.auth.password_reset_panel_title')</h3>
-                <p class="text-muted">@lang('coreui.auth.password_reset_panel_description')</p>
                 <form action="{{ route('password.update') }}" method="post">
 
                     @csrf
@@ -27,7 +28,7 @@
                         <input name="email"
                                type="text"
                                class="form-control @error('email') is-invalid @enderror"
-                               placeholder="@lang('coreui.auth.email_input')"
+                               placeholder="@lang('validation.attributes.frontend.email')"
                                value="{{ $email, old('email') }}">
                         @error('email')
                         <div class="invalid-feedback">{{ $message }}</div>
@@ -43,7 +44,7 @@
                         <input name="password"
                                type="password"
                                class="form-control @error('password') is-invalid @enderror"
-                               placeholder="@lang('coreui.auth.password_input')">
+                               placeholder="@lang('validation.attributes.frontend.password')">
                         @error('password')
                         <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
@@ -58,14 +59,14 @@
                         <input name="password_confirmation"
                                type="password"
                                class="form-control @error('password_confirmation') is-invalid @enderror"
-                               placeholder="@lang('coreui.auth.password_confirmation_input')">
+                               placeholder="@lang('validation.attributes.frontend.password_confirmation')">
                         @error('password_confirmation')
                         <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
 
                     <button class="btn btn-primary btn-block px-4 btn-square" type="submit">
-                        @lang('coreui.auth.password_reset_button')
+                        @lang('labels.frontend.passwords.send_password_reset_link_button')
                     </button>
 
                 </form>

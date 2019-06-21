@@ -53866,14 +53866,30 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         "login_panel_title": "Login",
         "name_input": "Name",
         "password_confirmation_input": "Retype your password",
+        "password_email_panel_description": "An email will be sent with the link to reset your password.",
+        "password_email_panel_title": "Reset password",
         "password_input": "Entry your Password",
-        "password_reset_panel_description": "An email will be sent with the link to reset your password.",
+        "password_reset_button": "Reset password",
+        "password_reset_panel_description": "Make sure you put a secure password and write it down in a safe place.",
         "password_reset_panel_title": "Reset password",
         "processing": "Processing",
+        "register_button": "Create account",
         "register_link": "You need a account",
         "register_panel_description": "Register a account.",
         "register_panel_title": "Register",
         "send_link_by_email": "Send link by E-mail"
+      },
+      "header_menu": {
+        "language_drop_down": "Choose language",
+        "language_menu": "Language",
+        "locales": {
+          "en": "English",
+          "es": "Spanish",
+          "pt-br": "Portuguese"
+        }
+      },
+      "sidebar_menu": {
+        "home": "Home"
       }
     },
     "en.pagination": {

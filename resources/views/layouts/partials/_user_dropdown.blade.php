@@ -5,13 +5,13 @@
     </a>
     <div class="dropdown-menu dropdown-menu-right">
         <div class="dropdown-header text-center">
-            <strong>@lang('Account')</strong>
+            <strong>@lang('coreui.header_menu.account')</strong>
         </div>
         <a class="dropdown-item" href="{{ route('logout') }}"
             onclick="event.preventDefault();
             document.getElementById('logout-form').submit();">
             <i class="fa fa-sign-out"></i>
-            @lang('Logout')
+            @lang('coreui.header_menu.logout')
         </a>
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
             @csrf

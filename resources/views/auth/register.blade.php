@@ -3,9 +3,10 @@
 @section('content')
 <div class="col-md-5">
     <div class="card">
+        <div class="card-header">
+            <strong>@lang('labels.frontend.auth.register_box_title')</strong>
+        </div>
         <div class="card-body">
-            <h3>@lang('coreui.auth.register_panel_title')</h3>
-            <p class="text-muted">@lang('coreui.auth.register_panel_description')</p>
             <form action="{{ route('register') }}" method="post">
 
                 @csrf
@@ -19,7 +20,7 @@
                     <input name="name"
                            type="text"
                            class="form-control @error('name') is-invalid @enderror"
-                           placeholder="@lang('coreui.auth.name_input')"
+                           placeholder="@lang('validation.attributes.frontend.name')"
                            value="{{ old('name') }}">
                     @error('name')
                     <div class="invalid-feedback">{{ $message }}</div>
@@ -35,7 +36,7 @@
                     <input name="email"
                            type="text"
                            class="form-control @error('email') is-invalid @enderror"
-                           placeholder="@lang('coreui.auth.email_input')"
+                           placeholder="@lang('validation.attributes.frontend.email')"
                            value="{{ old('email') }}">
                     @error('email')
                     <div class="invalid-feedback">{{ $message }}</div>
@@ -51,7 +52,7 @@
                     <input name="password"
                            type="password"
                            class="form-control @error('password') is-invalid @enderror"
-                           placeholder="@lang('coreui.auth.password_input')">
+                           placeholder="@lang('validation.attributes.frontend.password')">
                     @error('password')
                     <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
@@ -66,19 +67,19 @@
                     <input name="password_confirmation"
                            type="password"
                            class="form-control @error('password_confirmation') is-invalid @enderror"
-                           placeholder="@lang('coreui.auth.password_confirmation_input')">
+                           placeholder="@lang('validation.attributes.frontend.password_confirmation')">
                     @error('password_confirmation')
                     <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
 
                 <button class="btn btn-primary btn-block px-4 btn-square" type="submit">
-                    @lang('coreui.auth.register_button')
+                    @lang('labels.frontend.auth.register_button')
                 </button>
 
             </form>
             <a href="{{ route('login') }}" class="btn btn-link px-0">
-                @lang('coreui.auth.login_link')
+                @lang('labels.frontend.auth.back_to_login')
             </a>
         </div>
     </div>

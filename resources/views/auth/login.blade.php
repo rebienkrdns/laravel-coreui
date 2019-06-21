@@ -3,10 +3,10 @@
 @section('content')
     <div class="col-md-4">
         <div class="card">
+            <div class="card-header">
+                <strong>@lang('labels.frontend.auth.login_box_title')</strong>
+            </div>
             <div class="card-body">
-                <h3>@lang('coreui.auth.login_panel_title')</h3>
-                <p class="text-muted">@lang('coreui.auth.login_panel_description')</p>
-
                 <form action="{{ route('login') }}" method="post">
 
                     @csrf
@@ -20,7 +20,7 @@
                         <input type="text"
                                name="email"
                                class="form-control @error('email') is-invalid @enderror"
-                               placeholder="@lang('coreui.auth.email_input')"
+                               placeholder="@lang('validation.attributes.frontend.email')"
                                value="{{ old('email') }}">
                         @error('email')
                         <div class="invalid-feedback">{{ $message }}</div>
@@ -36,33 +36,29 @@
                         <input type="password"
                                name="password"
                                class="form-control @error('password') is-invalid @enderror"
-                               placeholder="@lang('coreui.auth.password_input')">
+                               placeholder="@lang('validation.attributes.frontend.password')">
                         @error('password')
                         <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
 
                     <button class="btn btn-primary btn-block px-4 btn-square" type="submit">
-                        @lang('coreui.auth.login_button')
+                        @lang('labels.frontend.auth.login_button')
                     </button>
-
                 </form>
-                <div class="row">
-                    @if(Route::has('password.request'))
-                        <div class="col-6">
-                            <a href="{{ route('password.request') }}" class="btn btn-link px-0">
-                                @lang('coreui.auth.forgot_password_link')
-                            </a>
-                        </div>
-                    @endif
-                    @if (Route::has('register'))
-                        <div class="col-6">
-                            <a href="{{ route('register') }}" class="btn btn-link px-0">
-                                @lang('coreui.auth.register_link')
-                            </a>
-                        </div>
-                    @endif
-                </div>
+
+                @if(Route::has('password.request'))
+                    <a href="{{ route('password.request') }}" class="btn btn-link px-0">
+                        @lang('labels.frontend.passwords.forgot_password')
+                    </a>
+                @endif
+
+                @if (Route::has('register'))
+                    <a href="{{ route('register') }}" class="btn btn-link px-0 float-right">
+                        @lang('labels.frontend.auth.create_account')
+                    </a>
+                @endif
+
             </div>
         </div>
     </div>
