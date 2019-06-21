@@ -48,6 +48,7 @@ return [
     ],
     'language-picker' => [
         'language' => 'Idioma',
+        'choose_language' => 'Escolha o seu idioma',
         /*
          * Add the new language to this array.
          * The key should have the same language code as the folder name.

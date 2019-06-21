@@ -2,5 +2,5 @@
 
 // Home
 Breadcrumbs::for('home', function ($trail) {
-    $trail->push(trans('Home'), route('home'));
+    $trail->push(trans('navs.general.home'), route('home'));
 });

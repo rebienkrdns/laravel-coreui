@@ -117,7 +117,8 @@ return [
             'register_box_title' => 'Registrar',
             'register_button' => 'Registrar',
             'remember_me' => 'Lembrar-me',
-            'create_account' => 'Precisa de uma conta?'
+            'create_account' => 'Precisa de uma conta?',
+            'back_to_login' => 'Voltar para o login'
         ],
 
         'contact' => [
