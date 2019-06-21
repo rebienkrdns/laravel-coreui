@@ -19,6 +19,6 @@ Auth::routes([
     'reset'     => true
 ]);
 
-Route::get('switch-locale/{locale}', 'Controller@switchLocale')->name('switchLocale');
+Route::get('switch-locale/{locale}', 'LanguageController@switchLocale')->name('switchLocale');
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
