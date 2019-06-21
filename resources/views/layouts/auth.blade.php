@@ -10,13 +10,12 @@
     @stack('css')
 </head>
 <body class="app flex-row align-items-center">
-    <div class="container" id="app">
+    <div class="container">
         <div class="row justify-content-center">
             @yield('content')
         </div>
     </div>
     @routes
-    <script src="{{ asset('js/lang.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

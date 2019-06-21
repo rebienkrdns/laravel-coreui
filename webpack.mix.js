@@ -5,7 +5,7 @@ const WebpackShellPlugin = require('webpack-shell-plugin');
 mix.webpackConfig({
     plugins:
         [
-            new WebpackShellPlugin({onBuildStart:['php artisan lang:js --quiet && php artisan ziggy:generate'], onBuildEnd:[]})
+            new WebpackShellPlugin({onBuildStart:['php artisan lang:js'], onBuildEnd:[]})
         ]
 });
 

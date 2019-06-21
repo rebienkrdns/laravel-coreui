@@ -14,6 +14,7 @@ try {
     require('@coreui/coreui');
     require('@coreui/coreui-plugin-chartjs-custom-tooltips');
     require('./ziggy');
+    require('./locales');
 } catch (e) {}
 
 /**
@@ -22,7 +23,7 @@ try {
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = require('axios/index');
+window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 

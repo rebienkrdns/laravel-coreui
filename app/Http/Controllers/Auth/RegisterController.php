@@ -71,19 +71,4 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password'])
         ]);
     }
-
-    /**
-     * The user has been registered.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  mixed  $user
-     * @return mixed
-     */
-    protected function registered(Request $request, $user)
-    {
-        return response()->json([
-            'message' => trans('successful authentication, will be redirected in a few seconds.'),
-            'redirectTo' => $this->redirectPath()
-        ], 200);
-    }
 }

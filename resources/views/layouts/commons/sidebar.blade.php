@@ -4,7 +4,7 @@
 
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('home') }}">
-                    <i class="nav-icon icon-home"></i> @lang('Home')
+                    <i class="nav-icon icon-home"></i> @lang('coreui.sidebar_menu.home')
                 </a>
             </li>
 

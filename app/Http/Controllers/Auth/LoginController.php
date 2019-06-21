@@ -43,21 +43,6 @@ class LoginController extends Controller
     }
 
     /**
-     * The user has been authenticated.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  mixed  $user
-     * @return mixed
-     */
-    protected function authenticated(Request $request, $user)
-    {
-        return response()->json([
-            'message' => trans('You have successfully authenticated'),
-            'redirectTo' => $this->redirectPath()
-        ], 200);
-    }
-
-    /**
      * Log the user out of the application.
      *
      * @param  \Illuminate\Http\Request  $request

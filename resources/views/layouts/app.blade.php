@@ -24,7 +24,6 @@
     </div>
     @include('layouts.commons.footer')
     @routes
-    <script src="{{ asset('js/lang.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
     @stack('js')
 </body>

@@ -18,5 +18,5 @@ return [
     /*
      * The default path to use for the generated javascript.
      */
-    'path' => public_path('js/lang.js'),
+    'path' => resource_path('assets/js/locales.js'),
 ];

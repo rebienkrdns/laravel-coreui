@@ -11,15 +11,15 @@
 </head>
 <body class="app flex-row align-items-center">
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            @yield('content')
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                @yield('content')
+            </div>
         </div>
     </div>
-</div>
 
-<script src="{{ asset('js/app.js') }}"></script>
-@stack('js')
+    <script src="{{ asset('js/app.js') }}"></script>
+    @stack('js')
 </body>
 </html>
