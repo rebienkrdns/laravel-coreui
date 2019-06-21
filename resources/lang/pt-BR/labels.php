@@ -35,6 +35,10 @@ return [
         'none' => 'Nenhuma',
     ],
     'backend' => [
+        'copy_right' => [
+            'developed_by' => 'Desenvolvido por',
+            'copyright' => 'Direito autoral'
+        ],
         'access' => [
             'roles' => [
                 'create' => 'Criar Papel',
@@ -118,7 +122,10 @@ return [
             'register_button' => 'Registrar',
             'remember_me' => 'Lembrar-me',
             'create_account' => 'Precisa de uma conta?',
-            'back_to_login' => 'Voltar para o login'
+            'back_to_login' => 'Voltar para o login',
+            'verify_box_title' => 'Verifique seu endereço de e-mail',
+            'verify_content' => 'Antes de prosseguir, verifique seu e-mail em busca de um link de verificação. Se você não recebeu o email,',
+            'verify_resend' => 'Clique aqui para solicitar outro.'
         ],
 
         'contact' => [

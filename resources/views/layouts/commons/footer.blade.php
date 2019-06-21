@@ -7,7 +7,7 @@
         </span>
     </div>
     <div class="ml-auto">
-        <span>@lang('Developed by')</span>
+        <span>@lang('labels.backend.copy_right.developed_by')</span>
         <a href="{{ config('app.author.web') }}">{{ config('app.author.name') }}</a>
     </div>
 </footer>

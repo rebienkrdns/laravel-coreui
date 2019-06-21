@@ -19,4 +19,14 @@ return [
         'title' => 'Servicio no disponible.',
         'description' => 'Volvemos en breve.',
     ],
+
+    '401' => [
+        'title' => 'No autorizado',
+        'description' => 'No tienes las credenciales para acceder.',
+    ],
+
+    '403' => [
+        'title' => 'Prohibido',
+        'description' => 'No estás autorizado para acceder.',
+    ]
 ];

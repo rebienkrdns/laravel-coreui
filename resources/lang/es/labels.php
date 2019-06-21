@@ -32,6 +32,10 @@ return [
     ],
 
     'backend' => [
+        'copy_right' => [
+            'developed_by' => 'Desarrollado por',
+            'copyright' => 'Derechos de autor'
+        ],
         'access' => [
             'roles' => [
                 'create' => 'Crear Rol',
@@ -118,7 +122,10 @@ return [
             'register_button' => 'Registrarse',
             'remember_me' => 'Recordarme',
             'create_account' => '¿Necesitar una cuenta?',
-            'back_to_login' => 'Volver al inicio de sesión'
+            'back_to_login' => 'Volver al inicio de sesión',
+            'verify_box_title' => 'Verifique su dirección de correo electrónico',
+            'verify_content' => 'Antes de continuar, consulte su correo electrónico para ver un enlace de verificación. Si no recibió el correo electrónico,',
+            'verify_resend' => 'Haga clic aquí para solicitar otro.'
         ],
 
         'contact' => [

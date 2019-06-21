@@ -16,7 +16,17 @@ return [
     ],
 
     '503' => [
-        'title' => 'Be right back.',
+        'title' => 'Be right back',
         'description' => 'Be right back.',
     ],
+
+    '401' => [
+        'title' => 'Unauthorized',
+        'description' => 'You do not have the credentials to access.',
+    ],
+
+    '403' => [
+        'title' => 'Forbidden',
+        'description' => 'You are not authorized to access.',
+    ]
 ];

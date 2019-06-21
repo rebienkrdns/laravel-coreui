@@ -35,6 +35,10 @@ return [
     ],
 
     'backend' => [
+        'copy_right' => [
+            'developed_by' => 'Developed by',
+            'copyright' => 'Copyright'
+        ],
         'access' => [
             'roles' => [
                 'create' => 'Create Role',
@@ -123,7 +127,10 @@ return [
             'register_button' => 'Register',
             'remember_me' => 'Remember Me',
             'create_account' => 'Need an account?',
-            'back_to_login' => 'Back to login'
+            'back_to_login' => 'Back to login',
+            'verify_box_title' => 'Verify Your Email Address',
+            'verify_content' => 'Before proceeding, please check your email for a verification link. If you did not receive the email,',
+            'verify_resend' => 'click here to request another.'
         ],
 
         'contact' => [

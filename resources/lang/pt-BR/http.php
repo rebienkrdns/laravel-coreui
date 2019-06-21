@@ -20,4 +20,14 @@ return [
         'title' => 'Voltamos logo',
         'description' => 'Voltamos logo.',
     ],
+
+    '401' => [
+        'title' => 'Não autorizado',
+        'description' => 'Você não tem as credenciais para acessar.',
+    ],
+
+    '403' => [
+        'title' => 'Proibido',
+        'description' => 'Você não está autorizado a acessar.',
+    ]
 ];
