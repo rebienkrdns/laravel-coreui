@@ -16,14 +16,15 @@ return [
         'home' => 'Inicio',
         'logout' => 'Cerrar Sesión',
     ],
-
+    'breadcrumbs' => [
+        'home' => 'Inicio'
+    ],
     'frontend' => [
         'contact' => 'Contacto',
         'dashboard' => 'Principal',
         'login' => 'Iniciar Sesión',
         'macros' => 'Macros',
         'register' => 'Registrarse',
-
         'user' => [
             'account' => 'Mi Cuenta',
             'administration' => 'Administración',

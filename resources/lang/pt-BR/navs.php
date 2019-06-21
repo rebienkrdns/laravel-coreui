@@ -17,6 +17,9 @@ return [
         'home' => 'Início',
         'logout' => 'Sair',
     ],
+    'breadcrumbs' => [
+        'home' => 'Início'
+    ],
     'frontend' => [
         'contact' => 'Contato',
         'dashboard' => 'Painel de Controle',
