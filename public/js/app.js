@@ -53825,71 +53825,372 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 (function () {
   Lang = new Lang();
   Lang.setMessages({
-    "en.app": {
-      "data_table": {
-        "aria": {
-          "sortAscending": ": activate to sort column ascending",
-          "sortDescending": ": activate to sort column descending"
+    "en.alerts": {
+      "backend": {
+        "roles": {
+          "created": "The role was successfully created.",
+          "deleted": "The role was successfully deleted.",
+          "updated": "The role was successfully updated."
         },
-        "decimal": "",
-        "emptyTable": "No data available in table",
-        "info": "Showing _START_ to _END_ of _TOTAL_ entries",
-        "infoEmpty": "Showing 0 to 0 of 0 entries",
-        "infoFiltered": "(filtered from _MAX_ total entries)",
-        "infoPostFix": "",
-        "lengthMenu": "Show _MENU_ entries",
-        "loadingRecords": "Loading...",
-        "paginate": {
-          "first": "First",
-          "last": "Last",
-          "next": "Next",
-          "previous": "Previous"
-        },
-        "processing": "Processing...",
-        "search": "Search:",
-        "thousands": ",",
-        "zeroRecords": "No matching records found"
+        "users": {
+          "cant_resend_confirmation": "The application is currently set to manually approve users.",
+          "confirmation_email": "A new confirmation e-mail has been sent to the address on file.",
+          "confirmed": "The user was successfully confirmed.",
+          "created": "The user was successfully created.",
+          "deleted": "The user was successfully deleted.",
+          "deleted_permanently": "The user was deleted permanently.",
+          "restored": "The user was successfully restored.",
+          "session_cleared": "The user's session was successfully cleared.",
+          "social_deleted": "Social Account Successfully Removed",
+          "unconfirmed": "The user was successfully un-confirmed",
+          "updated": "The user was successfully updated.",
+          "updated_password": "The user's password was successfully updated."
+        }
+      },
+      "frontend": {
+        "contact": {
+          "sent": "Your information was successfully sent. We will respond back to the e-mail provided as soon as we can."
+        }
       }
     },
     "en.auth": {
       "failed": "These credentials do not match our records.",
-      "throttle": "Too many login attempts. Please try again in :seconds seconds."
-    },
-    "en.coreui": {
-      "auth": {
-        "back_login_link": "Back to login",
-        "email_input": "E-Mail Address",
-        "forgot_password_link": "Forgot password?",
-        "login_button": "Login",
-        "login_link": "Already account?",
-        "login_panel_description": "Sign In to your account.",
-        "login_panel_title": "Login",
-        "name_input": "Name",
-        "password_confirmation_input": "Retype your password",
-        "password_email_panel_description": "An email will be sent with the link to reset your password.",
-        "password_email_panel_title": "Reset password",
-        "password_input": "Entry your Password",
-        "password_reset_button": "Reset password",
-        "password_reset_panel_description": "Make sure you put a secure password and write it down in a safe place.",
-        "password_reset_panel_title": "Reset password",
-        "processing": "Processing",
-        "register_button": "Create account",
-        "register_link": "You need a account",
-        "register_panel_description": "Register a account.",
-        "register_panel_title": "Register",
-        "send_link_by_email": "Send link by E-mail"
+      "general_error": "You do not have access to do that.",
+      "password_rules": "Your password must be more than 8 characters long, should contain at least 1 uppercase, 1 lowercase and 1 number.",
+      "password_used": "You can not set a password that you have previously used.",
+      "socialite": {
+        "unacceptable": ":provider is not an acceptable login type."
       },
-      "header_menu": {
-        "language_drop_down": "Choose language",
-        "language_menu": "Language",
-        "locales": {
-          "en": "English",
-          "es": "Spanish",
-          "pt-br": "Portuguese"
+      "throttle": "Too many login attempts. Please try again in :seconds seconds.",
+      "unknown": "An unknown error occurred"
+    },
+    "en.buttons": {
+      "backend": {
+        "access": {
+          "users": {
+            "activate": "Activate",
+            "change_password": "Change Password",
+            "clear_session": "Clear Session",
+            "confirm": "Confirm",
+            "deactivate": "Deactivate",
+            "delete_permanently": "Delete Permanently",
+            "login_as": "Login As :user",
+            "resend_email": "Resend Confirmation E-mail",
+            "restore_user": "Restore User",
+            "unconfirm": "Un-confirm",
+            "unlink": "Unlink"
+          }
         }
       },
-      "sidebar_menu": {
+      "emails": {
+        "auth": {
+          "confirm_account": "Confirm Account",
+          "reset_password": "Reset Password"
+        }
+      },
+      "general": {
+        "cancel": "Cancel",
+        "continue": "Continue",
+        "crud": {
+          "create": "Create",
+          "delete": "Delete",
+          "edit": "Edit",
+          "update": "Update",
+          "view": "View"
+        },
+        "save": "Save",
+        "view": "View"
+      }
+    },
+    "en.exceptions": {
+      "backend": {
+        "access": {
+          "roles": {
+            "already_exists": "That role already exists. Please choose a different name.",
+            "cant_delete_admin": "You can not delete the Administrator role.",
+            "create_error": "There was a problem creating this role. Please try again.",
+            "delete_error": "There was a problem deleting this role. Please try again.",
+            "has_users": "You can not delete a role with associated users.",
+            "needs_permission": "You must select at least one permission for this role.",
+            "not_found": "That role does not exist.",
+            "update_error": "There was a problem updating this role. Please try again."
+          },
+          "users": {
+            "already_confirmed": "This user is already confirmed.",
+            "cant_confirm": "There was a problem confirming the user account.",
+            "cant_deactivate_self": "You can not do that to yourself.",
+            "cant_delete_admin": "You can not delete the super administrator.",
+            "cant_delete_own_session": "You can not delete your own session.",
+            "cant_delete_self": "You can not delete yourself.",
+            "cant_restore": "This user is not deleted so it can not be restored.",
+            "cant_unconfirm_admin": "You can not un-confirm the super administrator.",
+            "cant_unconfirm_self": "You can not un-confirm yourself.",
+            "create_error": "There was a problem creating this user. Please try again.",
+            "delete_error": "There was a problem deleting this user. Please try again.",
+            "delete_first": "This user must be deleted first before it can be destroyed permanently.",
+            "email_error": "That email address belongs to a different user.",
+            "mark_error": "There was a problem updating this user. Please try again.",
+            "not_confirmed": "This user is not confirmed.",
+            "not_found": "That user does not exist.",
+            "restore_error": "There was a problem restoring this user. Please try again.",
+            "role_needed": "You must choose at least one role.",
+            "role_needed_create": "You must choose at lease one role.",
+            "social_delete_error": "There was a problem removing the social account from the user.",
+            "update_error": "There was a problem updating this user. Please try again.",
+            "update_password_error": "There was a problem changing this users password. Please try again."
+          }
+        }
+      },
+      "frontend": {
+        "auth": {
+          "confirmation": {
+            "already_confirmed": "Your account is already confirmed.",
+            "confirm": "Confirm your account!",
+            "created_confirm": "Your account was successfully created. We have sent you an e-mail to confirm your account.",
+            "created_pending": "Your account was successfully created and is pending approval. An e-mail will be sent when your account is approved.",
+            "mismatch": "Your confirmation code does not match.",
+            "not_found": "That confirmation code does not exist.",
+            "pending": "Your account is currently pending approval.",
+            "resend": "Your account is not confirmed. Please click the confirmation link in your e-mail, or <a href=\":url\">click here<\/a> to resend the confirmation e-mail.",
+            "resent": "A new confirmation e-mail has been sent to the address on file.",
+            "success": "Your account has been successfully confirmed!"
+          },
+          "deactivated": "Your account has been deactivated.",
+          "email_taken": "That e-mail address is already taken.",
+          "password": {
+            "change_mismatch": "That is not your old password.",
+            "reset_problem": "There was a problem resetting your password. Please resend the password reset email."
+          },
+          "registration_disabled": "Registration is currently closed."
+        }
+      }
+    },
+    "en.http": {
+      "401": {
+        "description": "You do not have the credentials to access.",
+        "title": "Unauthorized"
+      },
+      "403": {
+        "description": "You are not authorized to access.",
+        "title": "Forbidden"
+      },
+      "404": {
+        "description": "Sorry, but the page you were trying to view does not exist.",
+        "title": "Page Not Found"
+      },
+      "503": {
+        "description": "Be right back.",
+        "title": "Be right back"
+      }
+    },
+    "en.labels": {
+      "backend": {
+        "access": {
+          "roles": {
+            "create": "Create Role",
+            "edit": "Edit Role",
+            "management": "Role Management",
+            "table": {
+              "number_of_users": "Number of Users",
+              "permissions": "Permissions",
+              "role": "Role",
+              "sort": "Sort",
+              "total": "role total|roles total"
+            }
+          },
+          "users": {
+            "active": "Active Users",
+            "all_permissions": "All Permissions",
+            "change_password": "Change Password",
+            "change_password_for": "Change Password for :user",
+            "create": "Create User",
+            "deactivated": "Deactivated Users",
+            "deleted": "Deleted Users",
+            "edit": "Edit User",
+            "management": "User Management",
+            "no_permissions": "No Permissions",
+            "no_roles": "No Roles to set.",
+            "permissions": "Permissions",
+            "table": {
+              "abilities": "Abilities",
+              "confirmed": "Confirmed",
+              "created": "Created",
+              "email": "E-mail",
+              "first_name": "First Name",
+              "id": "ID",
+              "last_name": "Last Name",
+              "last_updated": "Last Updated",
+              "name": "Name",
+              "no_deactivated": "No Deactivated Users",
+              "no_deleted": "No Deleted Users",
+              "other_permissions": "Other Permissions",
+              "permissions": "Permissions",
+              "roles": "Roles",
+              "social": "Social",
+              "total": "user total|users total"
+            },
+            "tabs": {
+              "content": {
+                "overview": {
+                  "avatar": "Avatar",
+                  "confirmed": "Confirmed",
+                  "created_at": "Created At",
+                  "deleted_at": "Deleted At",
+                  "email": "E-mail",
+                  "first_name": "First Name",
+                  "last_login_at": "Last Login At",
+                  "last_login_ip": "Last Login IP",
+                  "last_name": "Last Name",
+                  "last_updated": "Last Updated",
+                  "name": "Name",
+                  "status": "Status",
+                  "timezone": "Timezone"
+                }
+              },
+              "titles": {
+                "history": "History",
+                "overview": "Overview"
+              }
+            },
+            "user_actions": "User Actions",
+            "view": "View User"
+          }
+        },
+        "copy_right": {
+          "copyright": "Copyright",
+          "developed_by": "Developed by"
+        }
+      },
+      "frontend": {
+        "auth": {
+          "back_to_login": "Back to login",
+          "create_account": "Need an account?",
+          "login_box_title": "Login",
+          "login_button": "Login",
+          "login_with": "Login with :social_media",
+          "register_box_title": "Register",
+          "register_button": "Register",
+          "remember_me": "Remember Me",
+          "verify_box_title": "Verify Your Email Address",
+          "verify_content": "Before proceeding, please check your email for a verification link. If you did not receive the email,",
+          "verify_resend": "click here to request another."
+        },
+        "contact": {
+          "box_title": "Contact Us",
+          "button": "Send Information"
+        },
+        "passwords": {
+          "expired_password_box_title": "Your password has expired.",
+          "forgot_password": "Forgot Your Password?",
+          "reset_password_box_title": "Reset Password",
+          "reset_password_button": "Reset Password",
+          "send_password_reset_link_button": "Send Password Reset Link",
+          "update_password_button": "Update Password"
+        },
+        "user": {
+          "passwords": {
+            "change": "Change Password"
+          },
+          "profile": {
+            "avatar": "Avatar",
+            "created_at": "Created At",
+            "edit_information": "Edit Information",
+            "email": "E-mail",
+            "first_name": "First Name",
+            "last_name": "Last Name",
+            "last_updated": "Last Updated",
+            "name": "Name",
+            "update_information": "Update Information"
+          }
+        }
+      },
+      "general": {
+        "actions": "Actions",
+        "active": "Active",
+        "all": "All",
+        "buttons": {
+          "save": "Save",
+          "update": "Update"
+        },
+        "copyright": "Copyright",
+        "create_new": "Create New",
+        "custom": "Custom",
+        "hide": "Hide",
+        "inactive": "Inactive",
+        "more": "More",
+        "no": "No",
+        "none": "None",
+        "show": "Show",
+        "toggle_navigation": "Toggle Navigation",
+        "toolbar_btn_groups": "Toolbar with button groups",
+        "yes": "Yes"
+      }
+    },
+    "en.menus": {
+      "backend": {
+        "access": {
+          "roles": {
+            "all": "All Roles",
+            "create": "Create Role",
+            "edit": "Edit Role",
+            "main": "Roles",
+            "management": "Role Management"
+          },
+          "title": "Access",
+          "users": {
+            "all": "All Users",
+            "change-password": "Change Password",
+            "create": "Create User",
+            "deactivated": "Deactivated Users",
+            "deleted": "Deleted Users",
+            "edit": "Edit User",
+            "main": "Users",
+            "view": "View User"
+          }
+        },
+        "log-viewer": {
+          "dashboard": "Dashboard",
+          "logs": "Logs",
+          "main": "Log Viewer"
+        },
+        "sidebar": {
+          "dashboard": "Dashboard",
+          "general": "General",
+          "history": "History",
+          "system": "System"
+        }
+      },
+      "language-picker": {
+        "choose_language": "Choose Language",
+        "langs": {
+          "en": "English",
+          "es": "Spanish",
+          "pt_BR": "Brazilian Portuguese"
+        },
+        "language": "Language"
+      }
+    },
+    "en.navs": {
+      "breadcrumbs": {
         "home": "Home"
+      },
+      "frontend": {
+        "contact": "Contact",
+        "dashboard": "Dashboard",
+        "login": "Login",
+        "macros": "Macros",
+        "register": "Register",
+        "user": {
+          "account": "My Account",
+          "administration": "Administration",
+          "change_password": "Change Password",
+          "my_information": "My Information",
+          "profile": "Profile"
+        }
+      },
+      "general": {
+        "home": "Home",
+        "logout": "Logout"
       }
     },
     "en.pagination": {
@@ -53897,11 +54198,116 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       "previous": "&laquo; Previous"
     },
     "en.passwords": {
-      "password": "Passwords must be at least eight characters and match the confirmation.",
+      "password": "Passwords must be at least six characters and match the confirmation.",
       "reset": "Your password has been reset!",
       "sent": "We have e-mailed your password reset link!",
       "token": "This password reset token is invalid.",
       "user": "We can't find a user with that e-mail address."
+    },
+    "en.roles": {
+      "administrator": "Administrator",
+      "user": "User"
+    },
+    "en.strings": {
+      "backend": {
+        "access": {
+          "users": {
+            "delete_user_confirm": "Are you sure you want to delete this user permanently? Anywhere in the application that references this user's id will most likely error. Proceed at your own risk. This can not be un-done.",
+            "if_confirmed_off": "(If confirmed is off)",
+            "no_deactivated": "There are no deactivated users.",
+            "no_deleted": "There are no deleted users.",
+            "restore_user_confirm": "Restore this user to its original state?"
+          }
+        },
+        "dashboard": {
+          "title": "Dashboard",
+          "welcome": "Welcome"
+        },
+        "general": {
+          "all_rights_reserved": "All Rights Reserved.",
+          "are_you_sure": "Are you sure you want to do this?",
+          "boilerplate_link": "Laravel 5 Boilerplate",
+          "continue": "Continue",
+          "member_since": "Member since",
+          "minutes": " minutes",
+          "search_placeholder": "Search...",
+          "see_all": {
+            "messages": "See all messages",
+            "notifications": "View all",
+            "tasks": "View all tasks"
+          },
+          "status": {
+            "offline": "Offline",
+            "online": "Online"
+          },
+          "timeout": "You were automatically logged out for security reasons since you had no activity in ",
+          "you_have": {
+            "messages": "{0} You don't have messages|{1} You have 1 message|[2,Inf] You have :number messages",
+            "notifications": "{0} You don't have notifications|{1} You have 1 notification|[2,Inf] You have :number notifications",
+            "tasks": "{0} You don't have tasks|{1} You have 1 task|[2,Inf] You have :number tasks"
+          }
+        },
+        "search": {
+          "empty": "Please enter a search term.",
+          "incomplete": "You must write your own search logic for this system.",
+          "results": "Search Results for :query",
+          "title": "Search Results"
+        },
+        "welcome": "Welcome to the Dashboard"
+      },
+      "emails": {
+        "auth": {
+          "account_confirmed": "Your account has been confirmed.",
+          "click_to_confirm": "Click here to confirm your account:",
+          "error": "Whoops!",
+          "greeting": "Hello!",
+          "password_cause_of_email": "You are receiving this email because we received a password reset request for your account.",
+          "password_if_not_requested": "If you did not request a password reset, no further action is required.",
+          "password_reset_subject": "Reset Password",
+          "regards": "Regards,",
+          "reset_password": "Click here to reset your password",
+          "thank_you_for_using_app": "Thank you for using our application!",
+          "trouble_clicking_button": "If you\u2019re having trouble clicking the \":action_text\" button, copy and paste the URL below into your web browser:"
+        },
+        "contact": {
+          "email_body_title": "You have a new contact form request: Below are the details:",
+          "subject": "A new :app_name contact form submission!"
+        }
+      },
+      "frontend": {
+        "general": {
+          "joined": "Joined"
+        },
+        "test": "Test",
+        "tests": {
+          "based_on": {
+            "permission": "Permission Based - ",
+            "role": "Role Based - "
+          },
+          "js_injected_from_controller": "Javascript Injected from a Controller",
+          "using_access_helper": {
+            "array_permissions": "Using Access Helper with Array of Permission Names or ID's where the user does have to possess all.",
+            "array_permissions_not": "Using Access Helper with Array of Permission Names or ID's where the user does not have to possess all.",
+            "array_roles": "Using Access Helper with Array of Role Names or ID's where the user does have to possess all.",
+            "array_roles_not": "Using Access Helper with Array of Role Names or ID's where the user does not have to possess all.",
+            "permission_id": "Using Access Helper with Permission ID",
+            "permission_name": "Using Access Helper with Permission Name",
+            "role_id": "Using Access Helper with Role ID",
+            "role_name": "Using Access Helper with Role Name"
+          },
+          "using_blade_extensions": "Using Blade Extensions",
+          "view_console_it_works": "View console, you should see 'it works!' which is coming from FrontendController@index",
+          "you_can_see_because": "You can see this because you have the role of ':role'!",
+          "you_can_see_because_permission": "You can see this because you have the permission of ':permission'!"
+        },
+        "user": {
+          "change_email_notice": "If you change your e-mail you will be logged out until you confirm your new e-mail address.",
+          "email_changed_notice": "You must confirm your new e-mail address before you can log in again.",
+          "password_updated": "Password successfully updated.",
+          "profile_updated": "Profile successfully updated."
+        },
+        "welcome_to": "Welcome to :place"
+      }
     },
     "en.validation": {
       "accepted": "The :attribute must be accepted.",
@@ -53912,7 +54318,62 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       "alpha_dash": "The :attribute may only contain letters, numbers, dashes and underscores.",
       "alpha_num": "The :attribute may only contain letters and numbers.",
       "array": "The :attribute must be an array.",
-      "attributes": [],
+      "attributes": {
+        "backend": {
+          "access": {
+            "permissions": {
+              "associated_roles": "Associated Roles",
+              "dependencies": "Dependencies",
+              "display_name": "Display Name",
+              "first_name": "First Name",
+              "group": "Group",
+              "group_sort": "Group Sort",
+              "groups": {
+                "name": "Group Name"
+              },
+              "last_name": "Last Name",
+              "name": "Name",
+              "system": "System"
+            },
+            "roles": {
+              "associated_permissions": "Associated Permissions",
+              "name": "Name",
+              "sort": "Sort"
+            },
+            "users": {
+              "active": "Active",
+              "associated_roles": "Associated Roles",
+              "confirmed": "Confirmed",
+              "email": "E-mail Address",
+              "first_name": "First Name",
+              "language": "Language",
+              "last_name": "Last Name",
+              "name": "Name",
+              "other_permissions": "Other Permissions",
+              "password": "Password",
+              "password_confirmation": "Password Confirmation",
+              "send_confirmation_email": "Send Confirmation E-mail",
+              "timezone": "Timezone"
+            }
+          }
+        },
+        "frontend": {
+          "avatar": "Avatar Location",
+          "email": "E-mail Address",
+          "first_name": "First Name",
+          "language": "Language",
+          "last_name": "Last Name",
+          "message": "Message",
+          "name": "Full Name",
+          "new_password": "New Password",
+          "new_password_confirmation": "New Password Confirmation",
+          "old_password": "Old Password",
+          "password": "Password",
+          "password_confirmation": "Password Confirmation",
+          "phone": "Phone",
+          "timezone": "Timezone"
+        }
+      },
       "before": "The :attribute must be a date before :date.",
       "before_or_equal": "The :attribute must be a date before or equal to :date.",
       "between": {
@@ -53937,7 +54398,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       "dimensions": "The :attribute has invalid image dimensions.",
       "distinct": "The :attribute field has a duplicate value.",
       "email": "The :attribute must be a valid email address.",
-      "ends_with": "The :attribute must end with one of the following: :values",
       "exists": "The selected :attribute is invalid.",
       "file": "The :attribute must be a file.",
       "filled": "The :attribute field must have a value.",
@@ -54014,322 +54474,1272 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       "url": "The :attribute format is invalid.",
       "uuid": "The :attribute must be a valid UUID."
     },
+    "es.alerts": {
+      "backend": {
+        "roles": {
+          "created": "Rol creado correctamente.",
+          "deleted": "Rol eliminado correctamente.",
+          "updated": "Rol actualizado correctamente."
+        },
+        "users": {
+          "cant_resend_confirmation": "La aplicaci\xF3n est\xE1 actualmente configurada para aprobaci\xF3n manual de usuarios.",
+          "confirmation_email": "Un nuevo mensaje de confirmaci\xF3n ha sido enviado a su correo.",
+          "confirmed": "El usuario fue confirmado correctamente.",
+          "created": "El usuario fue creado correctamente.",
+          "deleted": "El usuario fue eliminado correctamente.",
+          "deleted_permanently": "El usuario fue eliminado de forma permanente.",
+          "restored": "El usuario fue restaurado correctamente.",
+          "session_cleared": "La sesi\xF3n del usuario se borr\xF3 correctamente.",
+          "social_deleted": "La cuenta social fue eliminada correctamente.",
+          "unconfirmed": "El usuario fue desconfirmado correctamente",
+          "updated": "El usuario fue actualizado correctamente.",
+          "updated_password": "La contrase\xF1a fue actualizada correctamente."
+        }
+      },
+      "frontend": {
+        "contact": {
+          "sent": "Su informaci\xF3n fue enviada correctamente. Responderemos tan pronto sea posible al e-mail que proporcion\xF3."
+        }
+      }
+    },
     "es.auth": {
-      "failed": "Estas credenciales no coinciden con nuestros registros.",
-      "throttle": "Demasiados intentos de acceso. Por favor intente nuevamente en :seconds segundos."
+      "failed": "Las credenciales no se han encontrado.",
+      "general_error": "No tiene suficientes permisos.",
+      "password_rules": "Su contrase\xF1a debe tener m\xE1s de 8 caracteres, al menos una letra may\xFAscula, una min\xFAscula y un n\xFAmero.",
+      "password_used": "No puede establecer una contrase\xF1a que haya usado previamente.",
+      "socialite": {
+        "unacceptable": ":provider no es un tipo de autenticaci\xF3n v\xE1lido."
+      },
+      "throttle": "Demasiados intentos de inicio de sesi\xF3n. Vuelva a intentarlo en :seconds segundos.",
+      "unknown": "Se ha producido un error desconocido."
+    },
+    "es.buttons": {
+      "backend": {
+        "access": {
+          "users": {
+            "activate": "Activar",
+            "change_password": "Cambiar contrase\xF1a",
+            "clear_session": "Eliminar sesi\xF3n",
+            "confirm": "Confirmar",
+            "deactivate": "Desactivar",
+            "delete_permanently": "Eliminar de forma permanente",
+            "login_as": "Iniciar sesi\xF3n como :user",
+            "resend_email": "Reenviar e-mail de confirmaci\xF3n",
+            "restore_user": "Restaurar Usuario",
+            "unconfirm": "Deshacer",
+            "unlink": "Desactivar"
+          }
+        }
+      },
+      "emails": {
+        "auth": {
+          "confirm_account": "Confirmar Cuenta",
+          "reset_password": "Resetear Contrase\xF1a"
+        }
+      },
+      "general": {
+        "cancel": "Cancelar",
+        "continue": "Continuar",
+        "crud": {
+          "create": "Crear",
+          "delete": "Eliminar",
+          "edit": "Modificar",
+          "update": "Actualizar",
+          "view": "Visualizar"
+        },
+        "save": "Guardar",
+        "view": "Visualizar"
+      }
+    },
+    "es.exceptions": {
+      "backend": {
+        "access": {
+          "roles": {
+            "already_exists": "Este Rol ya existe. Por favor, especifique un nombre de Rol diferente.",
+            "cant_delete_admin": "No puede eliminar el Rol de Administrador.",
+            "create_error": "Hubo un problema al crear el Rol. Int\xE9ntelo de nuevo.",
+            "delete_error": "Hubo un problema al eliminar el Rol. Int\xE9ntelo de nuevo.",
+            "has_users": "No puede eliminar un Rol que tenga Usuarios asignados.",
+            "needs_permission": "Debe seleccionar al menos un permiso para cada Rol.",
+            "not_found": "El Rol requerido no existe.",
+            "update_error": "Hubo un problema al modificar el Rol. Int\xE9ntelo de nuevo."
+          },
+          "users": {
+            "already_confirmed": "Este Usuario ya fue confirmado.",
+            "cant_confirm": "Hubo un problema al confirmar la cuenta de Usuario.",
+            "cant_deactivate_self": "No puede desactivarse a s\xED mismo.",
+            "cant_delete_admin": "No puede eliminar el superadministrador.",
+            "cant_delete_own_session": "No puedes borrar su propia sesi\xF3n.",
+            "cant_delete_self": "No puede eliminarse a s\xED mismo.",
+            "cant_restore": "Este Usuario no fue eliminado, por lo que no se puede restaurar.",
+            "cant_unconfirm_admin": "No puede anular la confirmaci\xF3n del superadministrador.",
+            "cant_unconfirm_self": "No puede anular su propia confirmaci\xF3n.",
+            "create_error": "Hubo un problema al crear el Usuario. Int\xE9ntelo de nuevo.",
+            "delete_error": "Hubo un problema al eliminar el Usuario. Int\xE9ntelo de nuevo.",
+            "delete_first": "Este Usuario debe ser eliminado primero antes de que pueda ser destruido permanentemente.",
+            "email_error": "Ya hay un Usuario con la direcci\xF3n de e-mail especificada.",
+            "mark_error": "Hubo un problema al modificar el Usuario. Int\xE9ntelo de nuevo.",
+            "not_confirmed": "Este Usuario no est\xE1 confirmado.",
+            "not_found": "El Usuario requerido no existe.",
+            "restore_error": "Hubo un problema al restaurar el Usuario. Int\xE9ntelo de nuevo.",
+            "role_needed": "Debe elegir al menos un Rol.",
+            "role_needed_create": "Los Usuarios deben tener al menos un Rol.",
+            "social_delete_error": "Hubo un problema al eliminar la cuenta social del Usuario.",
+            "update_error": "Hubo un problema al modificar el Usuario. Int\xE9ntelo de nuevo.",
+            "update_password_error": "Hubo un problema al cambiar la contrase\xF1a. Int\xE9ntelo de nuevo."
+          }
+        }
+      },
+      "frontend": {
+        "auth": {
+          "confirmation": {
+            "already_confirmed": "Su cuenta ya ha sido verificada.",
+            "confirm": "\xA1Revise su correo y verifique su cuenta!",
+            "created_confirm": "Su cuenta ha sido creada. Le hemos enviado un e-mail con un enlace de verificaci\xF3n.",
+            "created_pending": "Su cuenta fue creada con \xE9xito y est\xE1 pendiente de aprobaci\xF3n. Se enviar\xE1 un correo electr\xF3nico cuando su cuenta sea aprobada.",
+            "mismatch": "El c\xF3digo de verificaci\xF3n no coincide.",
+            "not_found": "El c\xF3digo de verificaci\xF3n especificado no existe.",
+            "pending": "Su cuenta esta actualmente pendiente de aprobaci\xF3n",
+            "resend": "Su cuenta no ha sido verificada todav\xEDa. Por favor, revise su e-mail, o <a href=\":url\">pulse aqu\xED</a> para re-enviar el correo de verificaci\xF3n.",
+            "resent": "Un nuevo correo de verificaci\xF3n le ha sido enviado.",
+            "success": "\xA1Su cuenta ha sido verificada satisfactoriamente!"
+          },
+          "deactivated": "Su cuenta ha sido desactivada.",
+          "email_taken": "El correo especificado ya est\xE1 registrado.",
+          "password": {
+            "change_mismatch": "La contrase\xF1a antigua no coincide.",
+            "reset_problem": "Hubo un problema al restablecer su contrase\xF1a. Por favor, vuelva a enviar el correo electr\xF3nico de restablecimiento de contrase\xF1a"
+          },
+          "registration_disabled": "Los registros se encuentran actualmente cerrados."
+        }
+      }
+    },
+    "es.http": {
+      "401": {
+        "description": "No tienes las credenciales para acceder.",
+        "title": "No autorizado"
+      },
+      "403": {
+        "description": "No est\xE1s autorizado para acceder.",
+        "title": "Prohibido"
+      },
+      "404": {
+        "description": "Parece ser que la p\xE1gina que busca no existe.",
+        "title": "La p\xE1gina a la que intento acceder no ha sido encontrada."
+      },
+      "503": {
+        "description": "Volvemos en breve.",
+        "title": "Servicio no disponible."
+      }
+    },
+    "es.labels": {
+      "backend": {
+        "access": {
+          "roles": {
+            "create": "Crear Rol",
+            "edit": "Modificar Rol",
+            "management": "Administraci\xF3n de Roles",
+            "table": {
+              "number_of_users": "N\xFAmero de Usuarios",
+              "permissions": "Permisos",
+              "role": "Rol",
+              "sort": "Orden",
+              "total": "Todos los Roles"
+            }
+          },
+          "users": {
+            "active": "Usuarios activos",
+            "all_permissions": "Todos los Permisos",
+            "change_password": "Cambiar la contrase\xF1a",
+            "change_password_for": "Cambiar la contrase\xF1a para :user",
+            "create": "Crear Usuario",
+            "deactivated": "Usuarios desactivados",
+            "deleted": "Usuarios eliminados",
+            "edit": "Modificar Usuario",
+            "management": "Administraci\xF3n de Usuarios",
+            "no_permissions": "Sin Permisos",
+            "no_roles": "No hay Roles disponibles.",
+            "permissions": "Permisos",
+            "table": {
+              "confirmed": "Confirmado",
+              "created": "Creado",
+              "email": "Correo",
+              "first_name": "Nombre",
+              "id": "ID",
+              "last_name": "Apellidos",
+              "last_updated": "\xDAltima modificaci\xF3n",
+              "name": "Nombre",
+              "no_deactivated": "Ning\xFAn Usuario desactivado disponible",
+              "no_deleted": "Ning\xFAn Usuario eliminado disponible",
+              "other_permissions": "Otros Permisos",
+              "permissions": "Permisos",
+              "roles": "Roles",
+              "social": "Cuenta Social",
+              "total": "Todos los Usuarios"
+            },
+            "tabs": {
+              "content": {
+                "overview": {
+                  "avatar": "Avatar",
+                  "confirmed": "Confirmado",
+                  "created_at": "Creaci\xF3n",
+                  "deleted_at": "Eliminaci\xF3n",
+                  "email": "E-mail",
+                  "first_name": "Nombre",
+                  "last_login_at": "\xDAltimo login",
+                  "last_login_ip": "IP \xFAltimo login",
+                  "last_name": "Apellidos",
+                  "last_updated": "\xDAltima Actualizaci\xF3n",
+                  "name": "Nombre",
+                  "status": "Estado",
+                  "timezone": "Zona horaria"
+                }
+              },
+              "titles": {
+                "history": "Historia",
+                "overview": "Res\xFAmen"
+              }
+            },
+            "view": "Ver Usuario"
+          }
+        },
+        "copy_right": {
+          "copyright": "Derechos de autor",
+          "developed_by": "Desarrollado por"
+        }
+      },
+      "frontend": {
+        "auth": {
+          "back_to_login": "Volver al inicio de sesi\xF3n",
+          "create_account": "\xBFNecesitar una cuenta?",
+          "login_box_title": "Iniciar Sesi\xF3n",
+          "login_button": "Iniciar Sesi\xF3n",
+          "login_with": "Iniciar Sesi\xF3n mediante :social_media",
+          "register_box_title": "Registrarse",
+          "register_button": "Registrarse",
+          "remember_me": "Recordarme",
+          "verify_box_title": "Verifique su direcci\xF3n de correo electr\xF3nico",
+          "verify_content": "Antes de continuar, consulte su correo electr\xF3nico para ver un enlace de verificaci\xF3n. Si no recibi\xF3 el correo electr\xF3nico,",
+          "verify_resend": "Haga clic aqu\xED para solicitar otro."
+        },
+        "contact": {
+          "box_title": "Cont\xE1ctenos",
+          "button": "Enviar informaci\xF3n"
+        },
+        "passwords": {
+          "expired_password_box_title": "Su contrase\xF1a ha expirado",
+          "forgot_password": "\xBFHa olvidado su contrase\xF1a?",
+          "reset_password_box_title": "Reiniciar contrase\xF1a",
+          "reset_password_button": "Reiniciar contrase\xF1a",
+          "send_password_reset_link_button": "Enviar el correo de verificaci\xF3n",
+          "update_password_button": "Actualizar contrase\xF1a"
+        },
+        "user": {
+          "passwords": {
+            "change": "Cambiar la contrase\xF1a"
+          },
+          "profile": {
+            "avatar": "Avatar",
+            "created_at": "Creado el",
+            "edit_information": "Modificar la informaci\xF3n",
+            "email": "Correo",
+            "first_name": "Nombre",
+            "last_name": "Apellidos",
+            "last_updated": "\xDAltima modificaci\xF3n",
+            "name": "Nombre",
+            "update_information": "Actualizar la informaci\xF3n"
+          }
+        }
+      },
+      "general": {
+        "actions": "Acciones",
+        "active": "Activo",
+        "all": "Todos",
+        "buttons": {
+          "save": "Guardar",
+          "update": "Actualizar"
+        },
+        "copyright": "Copyright",
+        "custom": "Personalizado",
+        "hide": "Ocultar",
+        "inactive": "Inactivo",
+        "no": "No",
+        "none": "Ning\xFAno",
+        "show": "Mostrar",
+        "toggle_navigation": "Abrir/Cerrar men\xFA de navegaci\xF3n",
+        "yes": "S\xED"
+      }
+    },
+    "es.menus": {
+      "backend": {
+        "access": {
+          "roles": {
+            "all": "Todos los Roles",
+            "create": "Nuevo Rol",
+            "edit": "Modificar Rol",
+            "main": "Roles",
+            "management": "Administraci\xF3n de Roles"
+          },
+          "title": "Administraci\xF3n de acceso",
+          "users": {
+            "all": "Todos los Usuarios",
+            "change-password": "Cambiar la contrase\xF1a",
+            "create": "Nuevo Usuario",
+            "deactivated": "Usuarios Desactivados",
+            "deleted": "Usuarios Eliminados",
+            "edit": "Modificar Usuario",
+            "main": "Usuario",
+            "view": "Ver Usuario"
+          }
+        },
+        "log-viewer": {
+          "dashboard": "Principal",
+          "logs": "Logs",
+          "main": "Gestor de Logs"
+        },
+        "sidebar": {
+          "dashboard": "Principal",
+          "general": "General",
+          "history": "Historia",
+          "system": "Sistema"
+        }
+      },
+      "language-picker": {
+        "choose_language": "Elige el idioma",
+        "langs": {
+          "en": "Ingl\xE9s",
+          "es": "Espa\xF1ol",
+          "pt_BR": "Portugu\xE9s Brasile\xF1o"
+        },
+        "language": "Idioma"
+      }
+    },
+    "es.navs": {
+      "breadcrumbs": {
+        "home": "Inicio"
+      },
+      "frontend": {
+        "contact": "Contacto",
+        "dashboard": "Principal",
+        "login": "Iniciar Sesi\xF3n",
+        "macros": "Macros",
+        "register": "Registrarse",
+        "user": {
+          "account": "Mi Cuenta",
+          "administration": "Administraci\xF3n",
+          "change_password": "Cambiar la contrase\xF1a",
+          "my_information": "Mi Cuenta",
+          "profile": "Perfil"
+        }
+      },
+      "general": {
+        "home": "Inicio",
+        "logout": "Cerrar Sesi\xF3n"
+      }
     },
     "es.pagination": {
       "next": "Siguiente &raquo;",
       "previous": "&laquo; Anterior"
     },
     "es.passwords": {
-      "password": "Las contrase\xF1as deben coincidir y contener al menos 6 caracteres",
-      "reset": "\xA1Tu contrase\xF1a ha sido restablecida!",
-      "sent": "\xA1Te hemos enviado por correo el enlace para restablecer tu contrase\xF1a!",
-      "token": "El token de recuperaci\xF3n de contrase\xF1a es inv\xE1lido.",
-      "user": "No podemos encontrar ning\xFAn usuario con ese correo electr\xF3nico."
+      "password": "La contrase\xF1a debe tener al menos seis caracteres y coincidir con la de su confirmaci\xF3n.",
+      "reset": "\xA1Su contrase\xF1a se ha reiniciado!",
+      "sent": "\xA1Le hemos enviado el enlace para el reinicio de la contrase\xF1a!",
+      "token": "El c\xF3digo del reinicio de la contrase\xF1a es incorrecto.",
+      "user": "No se ha encontrado ning\xFAn Usuario con este correo."
     },
-    "es.validation": {
-      "accepted": ":attribute debe ser aceptado.",
-      "active_url": ":attribute no es una URL v\xE1lida.",
-      "after": ":attribute debe ser una fecha posterior a :date.",
-      "after_or_equal": ":attribute debe ser una fecha posterior o igual a :date.",
-      "alpha": ":attribute s\xF3lo debe contener letras.",
-      "alpha_dash": ":attribute s\xF3lo debe contener letras, n\xFAmeros y guiones.",
-      "alpha_num": ":attribute s\xF3lo debe contener letras y n\xFAmeros.",
-      "array": ":attribute debe ser un conjunto.",
-      "attributes": {
-        "address": "direcci\xF3n",
-        "age": "edad",
-        "body": "contenido",
-        "city": "ciudad",
-        "content": "contenido",
-        "country": "pa\xEDs",
-        "date": "fecha",
-        "day": "d\xEDa",
-        "description": "descripci\xF3n",
-        "email": "correo electr\xF3nico",
-        "excerpt": "extracto",
-        "first_name": "nombre",
-        "gender": "g\xE9nero",
-        "hour": "hora",
-        "last_name": "apellido",
-        "message": "mensaje",
-        "minute": "minuto",
-        "mobile": "m\xF3vil",
-        "month": "mes",
-        "name": "nombre",
-        "password": "contrase\xF1a",
-        "password_confirmation": "confirmaci\xF3n de la contrase\xF1a",
-        "phone": "tel\xE9fono",
-        "second": "segundo",
-        "sex": "sexo",
-        "subject": "asunto",
-        "time": "hora",
-        "title": "t\xEDtulo",
-        "username": "usuario",
-        "year": "a\xF1o"
-      },
-      "before": ":attribute debe ser una fecha anterior a :date.",
-      "before_or_equal": ":attribute debe ser una fecha anterior o igual a :date.",
-      "between": {
-        "array": ":attribute tiene que tener entre :min - :max \xEDtems.",
-        "file": ":attribute debe pesar entre :min - :max kilobytes.",
-        "numeric": ":attribute tiene que estar entre :min - :max.",
-        "string": ":attribute tiene que tener entre :min - :max caracteres."
-      },
-      "boolean": "El campo :attribute debe tener un valor verdadero o falso.",
-      "confirmed": "La confirmaci\xF3n de :attribute no coincide.",
-      "custom": {
-        "email": {
-          "unique": "El :attribute ya ha sido registrado."
+    "es.roles": {
+      "administrator": "Administrador",
+      "user": "Usuario"
+    },
+    "es.strings": {
+      "backend": {
+        "access": {
+          "users": {
+            "delete_user_confirm": "\xBFEst\xE1 seguro de querer eliminar este Usuario de forma permanente? Esto puede producir un error grave en aquellas partes de la aplicaci\xF3n que hagan referencia al mismo. Proceda con cautela. Esta operaci\xF3n no puede deshacerse.",
+            "if_confirmed_off": "(Si la confirmaci\xF3n est\xE1 desactivada)",
+            "no_deactivated": "No hay usuarios desactivados.",
+            "no_deleted": "No hay usuarios eliminados.",
+            "restore_user_confirm": "\xBFRestaurar este Usuario a su estado original?"
+          }
         },
-        "password": {
-          "min": "La :attribute debe contener m\xE1s de :min caracteres"
+        "dashboard": {
+          "title": "Panel de Administraci\xF3n",
+          "welcome": "Bienvenido"
+        },
+        "general": {
+          "all_rights_reserved": "Todos los derechos reservados.",
+          "are_you_sure": "\xBFEst\xE1 seguro?",
+          "boilerplate_link": "Laravel 5 Boilerplate",
+          "continue": "Continuar",
+          "member_since": "Miembro desde",
+          "minutes": " minutos",
+          "search_placeholder": "Buscar...",
+          "see_all": {
+            "messages": "Ver todos los mensajes",
+            "notifications": "Ver todo",
+            "tasks": "Ver todas las tareas"
+          },
+          "status": {
+            "offline": "Desconectado",
+            "online": "Conectado"
+          },
+          "timeout": "Usted ha sido automaticamente desconectado por razones de seguridad ya que no tuvo actividad en ",
+          "you_have": {
+            "messages": "{0} No tiene nuevos mensajes|{1} Tiene un nuevo mensaje|[2,Inf] Tiene :number nuevos mensajes ",
+            "notifications": "{0} No tiene nuevas notificaciones|{1} Tiene una nueva notificaci\xF3n|[2,Inf] Tiene :number nuevas notificaciones",
+            "tasks": "{0} No tiene nuevas tareas|{1} Tiene 1 nueva tarea|[2,Inf] Tiene :number nuevas tareas"
+          }
+        },
+        "search": {
+          "empty": "Por favor, escriba un t\xE9rmino de b\xFAsqueda.",
+          "incomplete": "Debe escribir su propia l\xF3gica de b\xFAsqueda para este sistema.",
+          "results": "Resultados de la b\xFAsqueda para :query",
+          "title": "Resultados de la b\xFAsqueda"
+        },
+        "welcome": "Bienenvidos al Panel de Control"
+      },
+      "emails": {
+        "auth": {
+          "account_confirmed": "Su cuenta ha sido confirmada.",
+          "click_to_confirm": "Pulse aqu\xED para verificar su cuenta:",
+          "error": "\xA1Ups!",
+          "greeting": "\xA1Hola!",
+          "password_cause_of_email": "Ha recibido este correo porque hemos recibido una solicitud de reinicio de contrase\xF1a para su cuenta.",
+          "password_if_not_requested": "Si usted no hizo la solicitud, no haga nada.",
+          "password_reset_subject": "Su enlace de reinicio de contrase\xF1a",
+          "regards": "Saludos,",
+          "reset_password": "Pulse aqu\xED para reiniciar su contrase\xF1a",
+          "thank_you_for_using_app": "\xA1Gracias por utilizar nuestra aplicaci\xF3n!",
+          "trouble_clicking_button": "Si tiene problemas haciendo clic en el bot\xF3n \":action_text\", copie y pegue el enlace en su navegador:"
+        },
+        "contact": {
+          "email_body_title": "Tiene una nueva solicitud del formulario de contacto. A continuaci\xF3n los detalles:",
+          "subject": "\xA1Nueva solicitud del formulario de contacto :app_name!"
         }
       },
-      "date": ":attribute no es una fecha v\xE1lida.",
-      "date_equals": ":attribute debe ser una fecha igual a :date.",
-      "date_format": ":attribute no corresponde al formato :format.",
-      "different": ":attribute y :other deben ser diferentes.",
-      "digits": ":attribute debe tener :digits d\xEDgitos.",
-      "digits_between": ":attribute debe tener entre :min y :max d\xEDgitos.",
-      "dimensions": "Las dimensiones de la imagen :attribute no son v\xE1lidas.",
+      "frontend": {
+        "general": {
+          "joined": "Afiliado"
+        },
+        "test": "Prueba",
+        "tests": {
+          "based_on": {
+            "permission": "Basado en el Permiso - ",
+            "role": "Basado en el Rol - "
+          },
+          "js_injected_from_controller": "Javascript inyectado desde el Controlador",
+          "using_access_helper": {
+            "array_permissions": "Uso de Access Helper con lista de nombres de Permisos o ID's donde el usuario tiene que tenerlos todos.",
+            "array_permissions_not": "Uso de Access Helper con lista de nombres de Permisos o ID's donde el usuario no tiene por que tenerlos todos.",
+            "array_roles": "Uso de Access Helper con lista de nombres de Roles o ID's donde el usuario tiene que tenerlos todos.",
+            "array_roles_not": "Uso de Access Helper con lista de nombres de Roles o ID's donde el usuario no tiene que tenerlos todos.",
+            "permission_id": "Uso de Access Helper mediante ID de Permiso",
+            "permission_name": "Uso de Access Helper mediante nombre de Permiso",
+            "role_id": "Uso de Access Helper mediante ID de Rol",
+            "role_name": "Uso de Access Helper mediante nombre de Rol"
+          },
+          "using_blade_extensions": "Usando las extensiones de Blade",
+          "view_console_it_works": "Mire la consola del navegador, deberia ver 'Funciona!!' que tiene su origen en FrontendController@index",
+          "you_can_see_because": "Puede ver esto porque dispone del Rol ':role'!",
+          "you_can_see_because_permission": "Puede ver esto porque dispone del Permiso ':permission'!"
+        },
+        "user": {
+          "change_email_notice": "Si cambia su correo electr\xF3nico, se cerrar\xE1 la sesi\xF3n hasta que confirme su nueva direcci\xF3n de correo electr\xF3nico.",
+          "email_changed_notice": "Debe confirmar su nueva direcci\xF3n de correo electr\xF3nico antes de poder iniciar sesi\xF3n de nuevo.",
+          "password_updated": "Contrase\xF1a actualizada correctamente.",
+          "profile_updated": "Perfil actualizado correctamente."
+        },
+        "welcome_to": "Bienvenido a :place"
+      }
+    },
+    "es.validation": {
+      "accepted": "El campo :attribute debe ser aceptado.",
+      "active_url": "El campo :attribute no es una URL v\xE1lida.",
+      "after": "El campo :attribute debe ser una fecha posterior a :date.",
+      "after_or_equal": "El campo :attribute debe ser una fecha posterior o igual a :date.",
+      "alpha": "El campo :attribute solo debe contener letras.",
+      "alpha_dash": "El campo :attribute solo debe contener letras, n\xFAmeros y barras.",
+      "alpha_num": "El campo :attribute solo debe contener letras y n\xFAmeros.",
+      "array": "El campo :attribute debe ser una lista.",
+      "attributes": {
+        "backend": {
+          "access": {
+            "permissions": {
+              "associated_roles": "Roles asociados",
+              "dependencies": "Dependencias",
+              "display_name": "Nombre a mostrar",
+              "first_name": "Nombre",
+              "group": "Grupo",
+              "group_sort": "Orden del Grupo",
+              "groups": {
+                "name": "Nombre del Grupo"
+              },
+              "last_name": "Apellidos",
+              "name": "Nombre",
+              "system": "Sistema"
+            },
+            "roles": {
+              "associated_permissions": "Permisos asociados",
+              "name": "Nombre",
+              "sort": "Orden"
+            },
+            "users": {
+              "active": "Activo",
+              "associated_roles": "Roles asociados",
+              "confirmed": "Confirmado",
+              "email": "Direcci\xF3n de correo",
+              "first_name": "Nombre",
+              "language": "Lenguaje",
+              "last_name": "Apellidos",
+              "name": "Nombre",
+              "other_permissions": "Otros Permisos",
+              "password": "Contrase\xF1a",
+              "password_confirmation": "Confirmaci\xF3n de la Contrase\xF1a",
+              "send_confirmation_email": "Enviar correo de confirmaci\xF3n",
+              "timezone": "Zona horaria"
+            }
+          }
+        },
+        "frontend": {
+          "avatar": "Avatar",
+          "email": "Direcci\xF3n de correo",
+          "first_name": "Nombre",
+          "language": "Lenguaje",
+          "last_name": "Apellidos",
+          "message": "Mensaje",
+          "name": "Nombre completo",
+          "new_password": "Nueva contrase\xF1a",
+          "new_password_confirmation": "Confirmaci\xF3n de la nueva contrase\xF1a",
+          "old_password": "Antigua contrase\xF1a",
+          "password": "Contrase\xF1a",
+          "password_confirmation": "Confirmaci\xF3n de la contrase\xF1a",
+          "phone": "Tel\xE9fono",
+          "timezone": "Zona Horaria"
+        }
+      },
+      "before": "El campo :attribute debe ser una fecha anterior a :date.",
+      "before_or_equal": "El campo :attribute debe ser una fecha anterior o igual a :date.",
+      "between": {
+        "array": "La lista :attribute debe contener entre :min y :max elementos.",
+        "file": "El fichero del campo :attribute debe tener entre :min y :max kilobytes.",
+        "numeric": "El campo :attribute debe ser un n\xFAmero entre :min y :max.",
+        "string": "El campo :attribute debe tener entre :min y :max caracteres."
+      },
+      "boolean": "El campo :attribute debe ser booleano.",
+      "confirmed": "El campo :attribute de confirmaci\xF3n no coincide.",
+      "custom": {
+        "attribute-name": {
+          "rule-name": "mensaje-personalizado"
+        }
+      },
+      "date": "El campo :attribute no es una fecha v\xE1lida.",
+      "date_equals": "The :attribute must be a date equal to :date.",
+      "date_format": "La fecha :attribute debe coincidir con el formato :format.",
+      "different": "Los campos :attribute y :other deben ser diferentes.",
+      "digits": "El n\xFAmero :attribute debe tener :digits d\xEDgitos.",
+      "digits_between": "El n\xFAmero :attribute debe tener entre :min y :max d\xEDgitos.",
+      "dimensions": "La imagen del campo :attribute tiene dimensiones inv\xE1lidas.",
       "distinct": "El campo :attribute contiene un valor duplicado.",
-      "email": ":attribute no es un correo v\xE1lido",
-      "exists": ":attribute es inv\xE1lido.",
+      "email": "El campo :attribute debe contener un e-mail v\xE1lido.",
+      "exists": "El campo :attribute seleccionado es inv\xE1lido.",
       "file": "El campo :attribute debe ser un archivo.",
       "filled": "El campo :attribute es obligatorio.",
       "gt": {
-        "array": "El campo :attribute debe tener m\xE1s de :value elementos.",
-        "file": "El campo :attribute debe tener m\xE1s de :value kilobytes.",
+        "array": "La lista :attribute debe tener m\xE1s de :value elementos.",
+        "file": "El fichero :attribute debe tener un tama\xF1o de m\xE1s de :value kilobytes.",
         "numeric": "El campo :attribute debe ser mayor que :value.",
         "string": "El campo :attribute debe tener m\xE1s de :value caracteres."
       },
       "gte": {
-        "array": "El campo :attribute debe tener como m\xEDnimo :value elementos.",
-        "file": "El campo :attribute debe tener como m\xEDnimo :value kilobytes.",
-        "numeric": "El campo :attribute debe ser como m\xEDnimo :value.",
-        "string": "El campo :attribute debe tener como m\xEDnimo :value caracteres."
+        "array": "La lista :attribute debe tener :value elementos o m\xE1s.",
+        "file": "El fichero :attribute debe tener un tama\xF1o mayor o igual de :value kilobytes.",
+        "numeric": "El campo :attribute debe ser mayor o igual que :value.",
+        "string": "El campo :attribute debe tener :value caracteres o m\xE1s."
       },
-      "image": ":attribute debe ser una imagen.",
-      "in": ":attribute es inv\xE1lido.",
+      "image": "El campo :attribute debe contener una imagen.",
+      "in": "El campo :attribute seleccionado no es v\xE1lido.",
       "in_array": "El campo :attribute no existe en :other.",
-      "integer": ":attribute debe ser un n\xFAmero entero.",
-      "ip": ":attribute debe ser una direcci\xF3n IP v\xE1lida.",
-      "ipv4": ":attribute debe ser un direcci\xF3n IPv4 v\xE1lida",
-      "ipv6": ":attribute debe ser un direcci\xF3n IPv6 v\xE1lida.",
-      "json": "El campo :attribute debe tener una cadena JSON v\xE1lida.",
+      "integer": "El campo :attribute debe ser un n\xFAmero entero.",
+      "ip": "El campo :attribute debe contener una direcci\xF3n IP v\xE1lida.",
+      "ipv4": "El campo :attribute debe contener una Direcci\xF3n IPv4 v\xE1lida.",
+      "ipv6": "El campo :attribute debe contener una Direcci\xF3n IPv6 v\xE1lida.",
+      "json": "El campo :attribute debe contener un JSON v\xE1lido.",
       "lt": {
-        "array": "El campo :attribute debe tener menos de :value elementos.",
-        "file": "El campo :attribute debe tener menos de :value kilobytes.",
+        "array": "La lista :attribute debe tener menos de :value elementos.",
+        "file": "El fichero del campo :attribute debe tener un tama\xF1o menor de :value kilobytes.",
         "numeric": "El campo :attribute debe ser menor que :value.",
         "string": "El campo :attribute debe tener menos de :value caracteres."
       },
       "lte": {
-        "array": "El campo :attribute debe tener como m\xE1ximo :value elementos.",
-        "file": "El campo :attribute debe tener como m\xE1ximo :value kilobytes.",
-        "numeric": "El campo :attribute debe ser como m\xE1ximo :value.",
-        "string": "El campo :attribute debe tener como m\xE1ximo :value caracteres."
+        "array": "La lista :attribute debe tener :value elementos o menos.",
+        "file": "El fichero del campo :attribute debe tener un tama\xF1o menor o igual de :value kilobytes.",
+        "numeric": "El campo :attribute debe ser menor o igual que :value.",
+        "string": "El campo :attribute debe tener :value caracteres o menos."
       },
       "max": {
-        "array": ":attribute no debe tener m\xE1s de :max elementos.",
-        "file": ":attribute no debe ser mayor que :max kilobytes.",
-        "numeric": ":attribute no debe ser mayor a :max.",
-        "string": ":attribute no debe ser mayor que :max caracteres."
+        "array": "La lista :attribute debe contener menos de :max elementos.",
+        "file": "El fichero del campo :attribute no debe tener un tama\xF1o mayor de :max kilobytes.",
+        "numeric": "El n\xFAmero :attribute no debe ser mayor que :max.",
+        "string": "El texto :attribute debe tener menos de :max caracteres."
       },
-      "mimes": ":attribute debe ser un archivo con formato: :values.",
-      "mimetypes": ":attribute debe ser un archivo con formato: :values.",
+      "mimes": "El fichero :attribute debe tener el formato\/s :values.",
       "min": {
-        "array": ":attribute debe tener al menos :min elementos.",
-        "file": "El tama\xF1o de :attribute debe ser de al menos :min kilobytes.",
-        "numeric": "El tama\xF1o de :attribute debe ser de al menos :min.",
-        "string": ":attribute debe contener al menos :min caracteres."
+        "array": "La lista :attribute debe contener, al menos, :min elementos.",
+        "file": "El fichero del campo :attribute debe tener un tama\xF1o menor o igual de :min kilobytes.",
+        "numeric": "El n\xFAmero :attribute debe ser mayor o igual que :min.",
+        "string": "El texto :attribute debe tener, al menos, :min caracteres."
       },
-      "not_in": ":attribute es inv\xE1lido.",
+      "not_in": "El campo :attribute seleccionado no es v\xE1lido.",
       "not_regex": "El formato del campo :attribute no es v\xE1lido.",
-      "numeric": ":attribute debe ser num\xE9rico.",
+      "numeric": "El campo :attribute debe ser un n\xFAmero.",
       "present": "El campo :attribute debe estar presente.",
-      "regex": "El formato de :attribute es inv\xE1lido.",
+      "regex": "El formato del campo :attribute no es v\xE1lido.",
       "required": "El campo :attribute es obligatorio.",
-      "required_if": "El campo :attribute es obligatorio cuando :other es :value.",
-      "required_unless": "El campo :attribute es obligatorio a menos que :other est\xE9 en :values.",
-      "required_with": "El campo :attribute es obligatorio cuando :values est\xE1 presente.",
-      "required_with_all": "El campo :attribute es obligatorio cuando :values est\xE1 presente.",
-      "required_without": "El campo :attribute es obligatorio cuando :values no est\xE1 presente.",
-      "required_without_all": "El campo :attribute es obligatorio cuando ninguno de :values est\xE9n presentes.",
-      "same": ":attribute y :other deben coincidir.",
+      "required_if": "El campo :attribute es obligatorio cuando :other tiene valor :value.",
+      "required_unless": "El campo :attribute es obligatorio, excepto cuando :other esta en :values.",
+      "required_with": "El campo :attribute es obligatorio cuando :values est\xE1n presentes.",
+      "required_with_all": "El campo :attribute es obligatorio cuando :values est\xE1n presentes.",
+      "required_without": "El campo :attribute es obligatorio cuando :values no est\xE1n presentes.",
+      "required_without_all": "El campo :attribute es obligatorio cuando ninguno de :values est\xE1n presentes.",
+      "same": "Los campos :attribute y :other deben coincidir.",
       "size": {
-        "array": ":attribute debe contener :size elementos.",
-        "file": "El tama\xF1o de :attribute debe ser :size kilobytes.",
-        "numeric": "El tama\xF1o de :attribute debe ser :size.",
-        "string": ":attribute debe contener :size caracteres."
+        "array": "La lista :attribute debe contener :size elementos.",
+        "file": "El fichero :attribute debe tener :size kilobytes.",
+        "numeric": "El n\xFAmero :attribute debe tener :size caracteres.",
+        "string": "El texto :attribute debe tener :size caracteres."
       },
-      "starts_with": "El campo :attribute debe comenzar con uno de los siguientes valores: :values",
-      "string": "El campo :attribute debe ser una cadena de caracteres.",
-      "timezone": "El :attribute debe ser una zona v\xE1lida.",
-      "unique": "El campo :attribute ya ha sido registrado.",
-      "uploaded": "Subir :attribute ha fallado.",
-      "url": "El formato :attribute es inv\xE1lido.",
+      "starts_with": "The :attribute must start with one of the following: :values",
+      "string": "El campo :attribute debe contener texto.",
+      "timezone": "El campo :attribute debe contener una zona horaria v\xE1lida.",
+      "unique": "El campo :attribute ya est\xE1 en uso.",
+      "uploaded": "El campo :attribute no se pudo actualizar.",
+      "url": "El enlace :attribute debe tener un formato v\xE1lido.",
       "uuid": "El campo :attribute debe ser un UUID v\xE1lido."
     },
+    "pt-BR.alerts": {
+      "backend": {
+        "roles": {
+          "created": "O papel foi criado com sucesso.",
+          "deleted": "O papel foi exclu\xEDdo com sucesso.",
+          "updated": "O papel foi atualizado com sucesso."
+        },
+        "users": {
+          "cant_resend_confirmation": "A aplica\xE7\xE3o est\xE1 configurada para aprovar usu\xE1rios manualmente.",
+          "confirmation_email": "Uma nova confirma\xE7\xE3o de e-mail ser\xE1 enviada.",
+          "confirmed": "O usu\xE1rio foi confirmado com sucesso.",
+          "created": "O usu\xE1rio foi criado com sucesso.",
+          "deleted": "O usu\xE1rio foi exclu\xEDdo com sucesso.",
+          "deleted_permanently": "O usu\xE1rio foi exclu\xEDdo permanentemente.",
+          "restored": "O usu\xE1rio foi restaurado com sucesso.",
+          "session_cleared": "Sess\xE3o do usu\xE1rio foi removida com sucesso.",
+          "social_deleted": "M\xEDdia Social removida com sucesso.",
+          "unconfirmed": "Confirma\xE7\xE3o do usu\xE1rio foi removida com sucesso.",
+          "updated": "O usu\xE1rio foi atualizado com sucesso.",
+          "updated_password": "A senha do usu\xE1rio foi atualizada com sucesso."
+        }
+      },
+      "frontend": {
+        "contact": {
+          "sent": "Suas informa\xE7\xF5es foram enviadas com sucesso. N\xF3s responderemos ao e-mail fornecido assim que poss\xEDvel."
+        }
+      }
+    },
     "pt-BR.auth": {
-      "failed": "Credenciais informadas n\xE3o correspondem com nossos registros.",
-      "throttle": "Voc\xEA realizou muitas tentativas de login. Por favor, tente novamente em :seconds segundos."
+      "failed": "Estas credenciais n\xE3o correspondem com nossos registros.",
+      "general_error": "Voc\xEA n\xE3o tem acesso para fazer isso.",
+      "password_rules": "Sua senha deve conter 8 caracteres ou mais, pelo menos uma letra mai\xFAscula, uma letra min\xFAscula e um n\xFAmero.",
+      "password_used": "Voc\xEA n\xE3o pode definir uma senha que voc\xEA j\xE1 tenha usado anteriormente.",
+      "socialite": {
+        "unacceptable": ":provider n\xE3o \xE9 um tipo de login aceit\xE1vel."
+      },
+      "throttle": "Voc\xEA realizou muitas tentativas de login. Favor tentar novamente em :seconds segundos.",
+      "unknown": "Ocorreu um erro desconhecido."
+    },
+    "pt-BR.buttons": {
+      "backend": {
+        "access": {
+          "users": {
+            "activate": "Ativar",
+            "change_password": "Alterar senha",
+            "clear_session": "Limpar Sess\xE3o",
+            "confirm": "Confirmar",
+            "deactivate": "Desativar",
+            "delete_permanently": "Excluir Permanentemente",
+            "login_as": "Entrar como :user",
+            "resend_email": "Reenviar e-mail de confirma\xE7\xE3o",
+            "restore_user": "Restaurar Usu\xE1rio",
+            "unconfirm": "Des-confirmar",
+            "unlink": "Dissociar"
+          }
+        }
+      },
+      "emails": {
+        "auth": {
+          "confirm_account": "Confirmar conta",
+          "reset_password": "Reiniciar senha"
+        }
+      },
+      "general": {
+        "cancel": "Cancelar",
+        "continue": "Continuar",
+        "crud": {
+          "create": "Criar",
+          "delete": "Excluir",
+          "edit": "Editar",
+          "update": "Atualizar",
+          "view": "Visualizar"
+        },
+        "save": "Salvar",
+        "view": "Visualizar"
+      }
+    },
+    "pt-BR.exceptions": {
+      "backend": {
+        "access": {
+          "roles": {
+            "already_exists": "Esse papel j\xE1 existe. Por favor, escolha um nome diferente.",
+            "cant_delete_admin": "Voc\xEA n\xE3o pode excluir o papel de Administrador.",
+            "create_error": "Houve um problema ao criar esse papel. Por favor, tente novamente.",
+            "delete_error": "Houve um problema ao excluir esse papel. Por favor, tente novamente.",
+            "has_users": "Voc\xEA n\xE3o pode excluir um papel com usu\xE1rios associados.",
+            "needs_permission": "Voc\xEA deve selecionar pelo menos uma permiss\xE3o para este papel.",
+            "not_found": "Este papel n\xE3o existe.",
+            "update_error": "Houve um problema ao atualizar esse papel. Por favor, tente novamente."
+          },
+          "users": {
+            "already_confirmed": "Este usu\xE1rio j\xE1 est\xE1 confirmado.",
+            "cant_confirm": "Ocorreu um problema ao confirmar este usu\xE1rio.",
+            "cant_deactivate_self": "Voc\xEA n\xE3o pode fazer isso com voc\xEA mesmo.",
+            "cant_delete_admin": "Voc\xEA n\xE3o pode excluir um super administrador.",
+            "cant_delete_own_session": "Voc\xEA n\xE3o pode deletar sua pr\xF3pria sess\xE3o.",
+            "cant_delete_self": "Voc\xEA n\xE3o pode se excluir.",
+            "cant_restore": "Este usu\xE1rio n\xE3o encontra-se exclu\xEDdo. N\xE3o foi poss\xEDvel restaur\xE1-lo.",
+            "cant_unconfirm_admin": "Voc\xEA n\xE3o pode des-confirmar o super administrador.",
+            "cant_unconfirm_self": "Voc\xEA n\xE3o pode des-confirmar a si mesmo.",
+            "create_error": "Houve um problema ao criar esse usu\xE1rio. Por favor, tente novamente.",
+            "delete_error": "Houve um problema ao excluir esse usu\xE1rio. Por favor, tente novamente.",
+            "delete_first": "Este usu\xE1rio precisa primeiro ser exclu\xEDdo para poder ser apagado permanentemente.",
+            "email_error": "Esse endere\xE7o de e-mail pertence a um usu\xE1rio diferente.",
+            "mark_error": "Houve um problema ao atualizar esse usu\xE1rio. Por favor, tente novamente",
+            "not_confirmed": "Este usu\xE1rio n\xE3o est\xE1 confirmado.",
+            "not_found": "Esse usu\xE1rio n\xE3o existe.",
+            "restore_error": "Houve um problema ao restaurar esse usu\xE1rio. Por favor, tente novamente.",
+            "role_needed": "Voc\xEA deve escolher pelo menos uma fun\xE7\xE3o.",
+            "role_needed_create": "Voc\xEA deve escolher pelo menos uma fun\xE7\xE3o.",
+            "social_delete_error": "Houve um problema ao tentar remover a m\xEDdia social do usu\xE1rio.",
+            "update_error": "Houve um problema ao atualizar esse usu\xE1rio. Por favor, tente novamente.",
+            "update_password_error": "Houve um problema ao alterar a senha do usu\xE1rio. Por favor, tente novamente."
+          }
+        }
+      },
+      "frontend": {
+        "auth": {
+          "confirmation": {
+            "already_confirmed": "Sua conta j\xE1 est\xE1 confirmada.",
+            "confirm": "Confirme sua conta!",
+            "created_confirm": "Sua conta foi criada com sucesso. Enviamos um e-mail para voc\xEA confirmar a sua conta.",
+            "created_pending": "Sua conta foi criada com sucesso e aguarda aprova\xE7\xE3o. Enviaremos um e-mail para voc\xEA assim que sua conta for aprovada.",
+            "mismatch": "Seu c\xF3digo de confirma\xE7\xE3o n\xE3o corresponde.",
+            "not_found": "Esse c\xF3digo de confirma\xE7\xE3o n\xE3o existe.",
+            "pending": "Sua conta aguarda aprova\xE7\xE3o para ser ativada.",
+            "resend": "Sua conta n\xE3o est\xE1 confirmada. Por favor, clique no link de confirma\xE7\xE3o em seu e-mail, ou <a href=\":url\">clique aqui</a> para reenviar o e-mail de confirma\xE7\xE3o.",
+            "resent": "Um novo e-mail de confirma\xE7\xE3o foi enviado para voc\xEA.",
+            "success": "Sua conta foi confirmada com sucesso!"
+          },
+          "deactivated": "Sua conta foi desativada.",
+          "email_taken": "Esse endere\xE7o de e-mail j\xE1 foi utilizado.",
+          "password": {
+            "change_mismatch": "Essa n\xE3o \xE9 a sua senha antiga.",
+            "reset_problem": "Houve um problema ao redefinir sua senha. Por favor, reinicie o processo de re-defini\xE7\xE3o de senha."
+          },
+          "registration_disabled": "Registro de novas contas est\xE1 atualmente bloqueado."
+        }
+      }
+    },
+    "pt-BR.http": {
+      "401": {
+        "description": "Voc\xEA n\xE3o tem as credenciais para acessar.",
+        "title": "N\xE3o autorizado"
+      },
+      "403": {
+        "description": "Voc\xEA n\xE3o est\xE1 autorizado a acessar.",
+        "title": "Proibido"
+      },
+      "404": {
+        "description": "Desculpe, mas a p\xE1gina que voc\xEA estava tentando visualizar n\xE3o existe.",
+        "title": "P\xE1gina n\xE3o encontrada"
+      },
+      "503": {
+        "description": "Voltamos logo.",
+        "title": "Voltamos logo"
+      }
+    },
+    "pt-BR.labels": {
+      "backend": {
+        "access": {
+          "roles": {
+            "create": "Criar Papel",
+            "edit": "Criar Papel",
+            "management": "Gerenciamento de Pap\xE9is",
+            "table": {
+              "number_of_users": "N\xFAmero de Usu\xE1rios",
+              "permissions": "Permiss\xF5es",
+              "role": "Papel",
+              "sort": "Ordenar",
+              "total": "total de permissao|total de permiss\xF5es"
+            }
+          },
+          "users": {
+            "active": "Ativar Usu\xE1rios",
+            "all_permissions": "Todas as Permiss\xF5es",
+            "change_password": "Alterar Senha",
+            "change_password_for": "Alterar senha para :user",
+            "create": "Criar Usu\xE1rio",
+            "deactivated": "Usu\xE1rios Desativados",
+            "deleted": "Usu\xE1rios Exclu\xEDdos",
+            "edit": "Editar Usu\xE1rio",
+            "management": "Gerenciamento Usu\xE1rios",
+            "no_permissions": "Sem permiss\xF5es",
+            "no_roles": "Sem pap\xE9is para definir.",
+            "permissions": "Permiss\xF5es",
+            "table": {
+              "abilities": "Habilidades",
+              "confirmed": "Confirmado",
+              "created": "Criado",
+              "email": "E-mail",
+              "first_name": "Primeiro Nome",
+              "id": "ID",
+              "last_name": "Sobrenome",
+              "last_updated": "\xDAltima atualiza\xE7\xE3o",
+              "name": "Nome",
+              "no_deactivated": "Nenhum usu\xE1rio desativado.",
+              "no_deleted": "Nenhum usu\xE1rio exclu\xEDdo",
+              "other_permissions": "Outras Permiss\xF5es",
+              "permissions": "Permiss\xF5es",
+              "roles": "Pap\xE9is",
+              "social": "Social",
+              "total": "total de usu\xE1rio|total de usu\xE1rios"
+            },
+            "tabs": {
+              "content": {
+                "overview": {
+                  "avatar": "Avatar",
+                  "confirmed": "Confirmado",
+                  "created_at": "Criado em",
+                  "deleted_at": "Apagado em",
+                  "email": "E-mail",
+                  "last_login_at": "\xDAltimo login em",
+                  "last_login_ip": "\xDAltimo IP de login",
+                  "last_updated": "\xDAltima atualiza\xE7\xE3o",
+                  "name": "Nome",
+                  "status": "Estado",
+                  "timezone": "Timezone"
+                }
+              },
+              "titles": {
+                "history": "Hist\xF3rico",
+                "overview": "Vis\xE3o Geral"
+              }
+            },
+            "user_actions": "A\xE7\xF5es de Usu\xE1rios",
+            "view": "Visualizar Usu\xE1rio"
+          }
+        },
+        "copy_right": {
+          "copyright": "Direito autoral",
+          "developed_by": "Desenvolvido por"
+        }
+      },
+      "frontend": {
+        "auth": {
+          "back_to_login": "Voltar para o login",
+          "create_account": "Precisa de uma conta?",
+          "login_box_title": "Entrar",
+          "login_button": "Entrar",
+          "login_with": "Entrar com :social_media",
+          "register_box_title": "Registrar",
+          "register_button": "Registrar",
+          "remember_me": "Lembrar-me",
+          "verify_box_title": "Verifique seu endere\xE7o de e-mail",
+          "verify_content": "Antes de prosseguir, verifique seu e-mail em busca de um link de verifica\xE7\xE3o. Se voc\xEA n\xE3o recebeu o email,",
+          "verify_resend": "Clique aqui para solicitar outro."
+        },
+        "contact": {
+          "box_title": "Contato",
+          "button": "Enviar"
+        },
+        "macros": {
+          "country": {
+            "alpha": "C\xF3digos de Pa\xEDs Alpha",
+            "alpha2": "C\xF3digos de Pa\xEDs Alpha 2",
+            "alpha3": "C\xF3digos de Pa\xEDs Alpha 3",
+            "numeric": "C\xF3digos Num\xE9ricos Pa\xEDs"
+          },
+          "macro_examples": "Exemplo de Macros",
+          "state": {
+            "mexico": "Lista de Estados do M\xE9xico",
+            "us": {
+              "armed": "For\xE7as Armadas dos EUA",
+              "outlying": "Territ\xF3rios Distantes EUA",
+              "us": "Lista de estados dos EUA"
+            }
+          },
+          "territories": {
+            "canada": "Prov\xEDncia do Canad\xE1 e Lista de Territ\xF3rios"
+          },
+          "timezone": "Fuso hor\xE1rio"
+        },
+        "passwords": {
+          "forgot_password": "Esqueceu Sua Senha?",
+          "reset_password_box_title": "Resetar Senha",
+          "reset_password_button": "Resetar Senha",
+          "send_password_reset_link_button": "Enviar link para redefini\xE7\xE3o de senha"
+        },
+        "user": {
+          "passwords": {
+            "change": "Alterar Senha"
+          },
+          "profile": {
+            "avatar": "Avatar",
+            "created_at": "Criado em",
+            "edit_information": "Editar informa\xE7\xF5es",
+            "email": "E-mail",
+            "last_updated": "\xDAltima atualiza\xE7\xE3o",
+            "name": "Nome",
+            "update_information": "Atualizar informa\xE7\xE3o"
+          }
+        }
+      },
+      "general": {
+        "actions": "A\xE7\xF5es",
+        "active": "Ativo",
+        "all": "Todos",
+        "buttons": {
+          "save": "Salvar",
+          "update": "Atualizar"
+        },
+        "create_new": "Criar novo",
+        "custom": "Personalizado",
+        "hide": "Esconder",
+        "inactive": "Inativo",
+        "more": "Mais",
+        "no": "N\xE3o",
+        "none": "Nenhuma",
+        "show": "Mostrar",
+        "toggle_navigation": "Mostrar / Esconder Navega\xE7\xE3o",
+        "toolbar_btn_groups": "Barra de ferramentas com grupo de bot\xF5es",
+        "yes": "Sim"
+      }
+    },
+    "pt-BR.menus": {
+      "backend": {
+        "access": {
+          "roles": {
+            "all": "Todos os Pap\xE9is",
+            "create": "Criar Papel",
+            "edit": "Editar Papel",
+            "main": "Pap\xE9is",
+            "management": "Gerenciamento de Pap\xE9is"
+          },
+          "title": "Gerenciamento de Usu\xE1rios",
+          "users": {
+            "all": "Todos os Usu\xE1rios",
+            "change-password": "Alterar Senha",
+            "create": "Criar Usu\xE1rio",
+            "deactivated": "Usu\xE1rios Desativados",
+            "deleted": "Usu\xE1rios Exclu\xEDdos",
+            "edit": "Editar Usu\xE1rio",
+            "main": "Usu\xE1rios",
+            "view": "Visualizar Usu\xE1rio"
+          }
+        },
+        "log-viewer": {
+          "dashboard": "Painel de Controle",
+          "logs": "Logs",
+          "main": "Visualizador de Log"
+        },
+        "sidebar": {
+          "dashboard": "Painel de Controle",
+          "general": "Geral",
+          "history": "History",
+          "system": "Sistema"
+        }
+      },
+      "language-picker": {
+        "choose_language": "Escolha o seu idioma",
+        "langs": {
+          "en": "Ingl\xEAs",
+          "es": "Espanhol",
+          "pt_BR": "Portugu\xEAs do Brasil"
+        },
+        "language": "Idioma"
+      }
+    },
+    "pt-BR.navs": {
+      "breadcrumbs": {
+        "home": "In\xEDcio"
+      },
+      "frontend": {
+        "contact": "Contato",
+        "dashboard": "Painel de Controle",
+        "login": "Entrar",
+        "macros": "Macros",
+        "register": "Registrar",
+        "user": {
+          "account": "Minha Conta",
+          "administration": "Administra\xE7\xE3o",
+          "change_password": "Alterar Senha",
+          "my_information": "Minhas Informa\xE7\xF5es",
+          "profile": "Perfil"
+        }
+      },
+      "general": {
+        "home": "In\xEDcio",
+        "logout": "Sair"
+      }
     },
     "pt-BR.pagination": {
-      "next": "Pr\xF3xima &raquo;",
+      "next": "Pr\xF3ximo &raquo;",
       "previous": "&laquo; Anterior"
     },
     "pt-BR.passwords": {
-      "password": "A senha deve conter pelo menos seis caracteres e ser igual \xE0 confirma\xE7\xE3o.",
+      "password": "A senha dever\xE1 conter pelo menos seis carateres e ser igual \xE0 confirma\xE7\xE3o.",
       "reset": "Sua senha foi redefinida!",
-      "sent": "Enviamos um link para redefinir a sua senha por e-mail.",
-      "token": "Esse c\xF3digo de redefini\xE7\xE3o de senha \xE9 inv\xE1lido.",
-      "user": "N\xE3o conseguimos encontrar nenhum usu\xE1rio com o endere\xE7o de e-mail informado."
+      "sent": "N\xF3s enviamos um link de recupera\xE7\xE3o de senha por e-mail.",
+      "token": "Este c\xF3digo de recupera\xE7\xE3o de senha \xE9 inv\xE1lido.",
+      "user": "N\xE3o conseguimos encontrar nenhum usu\xE1rio com o endere\xE7o de e-mail especificado."
+    },
+    "pt-BR.roles": {
+      "administrator": "Administrador",
+      "user": "Usu\xE1rio"
+    },
+    "pt-BR.strings": {
+      "backend": {
+        "access": {
+          "users": {
+            "delete_user_confirm": "Tem certeza de que deseja excluir este usu\xE1rio permanentemente? Em algum lugar do aplicativo pode fazer refer\xEAncia ao id deste usu\xE1rio e possivelmente pode ocasionar um erro. Prossiga por sua conta e risco. Isso n\xE3o pode ser desfeito.",
+            "if_confirmed_off": "(Se confirmado estiver desligado)",
+            "no_deactivated": "N\xE3o h\xE1 usu\xE1rios desativados.",
+            "no_deleted": "N\xE3o h\xE1 usu\xE1rios exclu\xEDdos.",
+            "restore_user_confirm": "Restaurar esse usu\xE1rio ao seu estado original?"
+          }
+        },
+        "dashboard": {
+          "title": "Painel de Controle Administrativo",
+          "welcome": "Bem-vindo"
+        },
+        "general": {
+          "all_rights_reserved": "Todos os direitos reservados.",
+          "are_you_sure": "Tem certeza?",
+          "boilerplate_link": "Laravel 5 Boilerplate",
+          "continue": "Continuar",
+          "member_since": "Membro desde",
+          "minutes": " minutos",
+          "search_placeholder": "Buscar...",
+          "see_all": {
+            "messages": "Ver todas as mensagens",
+            "notifications": "Ver todas as notifica\xE7\xF5es",
+            "tasks": "Ver todas as tarefas"
+          },
+          "status": {
+            "offline": "Offline",
+            "online": "Online"
+          },
+          "timeout": "Voc\xEA foi automaticamente desconectado por quest\xE3o de seguran\xE7a j\xE1 que voc\xEA estava inativo por ",
+          "you_have": {
+            "messages": "{0} Voc\xEA n\xE3o tem mensagens|{1} Voc\xEA tem 1 mensagem|[2,Inf] Voc\xEA tem :number mensagens",
+            "notifications": "{0} Voc\xEA n\xE3o tem notifica\xE7\xF5es|{1} Voc\xEA tem 1 notifica\xE7\xE3o|[2,Inf] Voc\xEA tem :number notifica\xE7\xF5es",
+            "tasks": "{0} Voc\xEA n\xE3o tem tarefas|{1} Voc\xEA tem 1 tarefa|[2,Inf] Voc\xEA tem :number tarefas"
+          }
+        },
+        "search": {
+          "empty": "Por favor, digite um termo de busca.",
+          "incomplete": "Voc\xEA deve escrever sua pr\xF3pria l\xF3gica de busca para este sistema.",
+          "results": "Resultados da busca por :query",
+          "title": "Resultados da busca"
+        },
+        "welcome": "Welcome to the Dashboard"
+      },
+      "emails": {
+        "auth": {
+          "account_confirmed": "Sua conta foi confirmada.",
+          "click_to_confirm": "Clique aqui para confirmar a sua conta:",
+          "error": "Oops!",
+          "greeting": "Ol\xE1!",
+          "password_cause_of_email": "Voc\xEA recebeu este email porque n\xF3s recebemos uma solicita\xE7\xE3o de redefini\xE7\xE3o de senha para a sua conta.",
+          "password_if_not_requested": "Se voc\xEA n\xE3o solicitou uma redefini\xE7\xE3o de senha, nenhuma outra a\xE7\xE3o \xE9 necess\xE1ria.",
+          "password_reset_subject": "Seu link para redefini\xE7\xE3o de senha",
+          "regards": "Nossos cumprimentos,",
+          "reset_password": "Clique aqui para redefinir sua senha",
+          "thank_you_for_using_app": "Obrigado por utilizar o nosso sistema!",
+          "trouble_clicking_button": "Se voc\xEA est\xE1 com problemas para clicar no bot\xE3o \":action_text\", copie e cole a URL abaixo no seu navegador:"
+        },
+        "contact": {
+          "email_body_title": "Voc\xEA tem um novo contato. Seguem detalhes:",
+          "subject": "Um novo contato de :app_name!"
+        }
+      },
+      "frontend": {
+        "general": {
+          "joined": "Entrou"
+        },
+        "test": "Teste",
+        "tests": {
+          "based_on": {
+            "permission": "Baseado na Permiss\xE3o do Usu\xE1rio - ",
+            "role": "Baseado no Papel do Usu\xE1rio - "
+          },
+          "js_injected_from_controller": "Javascript Injetado de um Controller",
+          "using_access_helper": {
+            "array_permissions": "Usando o \"Access Helper\" com um Array de Nomes de Permiss\xF5es ou ID's onde o usu\xE1rio precisa satisfazer ambas as condi\xE7\xF5es.",
+            "array_permissions_not": "Usando o \"Access Helper\" com um Array de Nomes de Permiss\xF5es ou ID's onde o usu\xE1rio n\xE3o precisa satisfazer ambas as condi\xE7\xF5es.",
+            "array_roles": "Usando o \"Access Helper\" com um Array de Nomes de Pap\xE9is ou ID's onde o usu\xE1rio precisa satisfazer ambas as condi\xE7\xF5es.",
+            "array_roles_not": "Usando o \"Access Helper\" com um Array de Nomes de Pap\xE9is ou ID's onde o usu\xE1rio n\xE3o precisa satisfazer ambas as condi\xE7\xF5es.",
+            "permission_id": "Usando o \"Access Helper\" com o ID da Permiss\xE3o",
+            "permission_name": "Usando o \"Access Helper\" com o Nome da Permiss\xE3o",
+            "role_id": "Usando o \"Access Helper\" com o ID do Papel",
+            "role_name": "Usando o \"Access Helper\" com o Nome do Papel"
+          },
+          "using_blade_extensions": "Usando as Extens\xF5es Blade",
+          "view_console_it_works": "Veja o console, voc\xEA dever\xE1 ver a mensagem 'it works!' que est\xE1 vindo de FrontendController@index",
+          "you_can_see_because": "Voc\xEA pode ver isto porque voc\xEA tem o papel de ':role'!",
+          "you_can_see_because_permission": "Voc\xEA pode ver isto porque voc\xEA tem a permiss\xE3o de ':permission'!"
+        },
+        "user": {
+          "change_email_notice": "Se voc\xEA alterar seu e-mail, voc\xEA ser\xE1 deslogado at\xE9 que confirme seu novo e-mail.",
+          "email_changed_notice": "Voc\xEA deve confirmar seu novo e-mail antes de fazer login novamente.",
+          "password_updated": "Senha atualizada com sucesso.",
+          "profile_updated": "Perfil atualizado com sucesso."
+        },
+        "welcome_to": "Bem-vindo a :place"
+      }
     },
     "pt-BR.validation": {
       "accepted": "O campo :attribute deve ser aceito.",
-      "active_url": "O campo :attribute deve conter uma URL v\xE1lida.",
-      "after": "O campo :attribute deve conter uma data posterior a :date.",
-      "after_or_equal": "O campo :attribute deve conter uma data superior ou igual a :date.",
-      "alpha": "O campo :attribute deve conter apenas letras.",
-      "alpha_dash": "O campo :attribute deve conter apenas letras, n\xFAmeros e tra\xE7os.",
-      "alpha_num": "O campo :attribute deve conter apenas letras e n\xFAmeros .",
-      "array": "O campo :attribute deve conter um array.",
+      "active_url": "O campo :attribute n\xE3o cont\xE9m um URL v\xE1lido.",
+      "after": "O campo :attribute dever\xE1 conter uma data posterior a :date.",
+      "after_or_equal": "O campo :attribute deve ser igual ou posterior a :date.",
+      "alpha": "O campo :attribute dever\xE1 conter apenas letras.",
+      "alpha_dash": "O campo :attribute dever\xE1 conter apenas letras, n\xFAmeros e tra\xE7os.",
+      "alpha_num": "O campo :attribute dever\xE1 conter apenas letras e n\xFAmeros .",
+      "array": "O campo :attribute precisa ser um conjunto.",
       "attributes": {
-        "address": "endere\xE7o",
-        "age": "idade",
-        "body": "conte\xFAdo",
-        "city": "cidade",
-        "country": "pa\xEDs",
-        "date": "data",
-        "day": "dia",
-        "description": "descri\xE7\xE3o",
-        "email": "e-mail",
-        "excerpt": "resumo",
-        "first_name": "primeiro nome",
-        "gender": "g\xEAnero",
-        "hour": "hora",
-        "last_name": "sobrenome",
-        "message": "mensagem",
-        "minute": "minuto",
-        "mobile": "celular",
-        "month": "m\xEAs",
-        "name": "nome",
-        "password": "senha",
-        "password_confirmation": "confirma\xE7\xE3o da senha",
-        "phone": "telefone",
-        "remember": "lembrar-se de mim",
-        "second": "segundo",
-        "sex": "sexo",
-        "state": "estado",
-        "subject": "assunto",
-        "text": "texto",
-        "time": "hora",
-        "title": "t\xEDtulo",
-        "username": "usu\xE1rio",
-        "year": "ano"
+        "backend": {
+          "access": {
+            "permissions": {
+              "associated_roles": "Pap\xE9is Associados",
+              "dependencies": "Depend\xEAncias",
+              "display_name": "Nome de Apresenta\xE7\xE3o",
+              "group": "Grupo",
+              "group_sort": "Ordenar Grupo",
+              "groups": {
+                "name": "Nome do Grupo"
+              },
+              "name": "Nome",
+              "system": "Sistema?"
+            },
+            "roles": {
+              "associated_permissions": "Permiss\xF5es Associadas",
+              "name": "Nome",
+              "sort": "Ordenar"
+            },
+            "users": {
+              "active": "Ativo",
+              "associated_roles": "Pap\xE9is Associados",
+              "confirmed": "Confirmado",
+              "email": "Endere\xE7o de e-mail",
+              "first_name": "Primeiro Nome",
+              "last_name": "Sobrenome",
+              "name": "Nome",
+              "other_permissions": "Outras Permiss\xF5es",
+              "password": "Senha",
+              "password_confirmation": "Confirme sua senha",
+              "send_confirmation_email": "Enviar E-mail de Confirma\xE7\xE3o"
+            }
+          }
+        },
+        "frontend": {
+          "email": "Endere\xE7o de e-mail",
+          "first_name": "Primeiro Nome",
+          "last_name": "Sobrenome",
+          "message": "Mensagem",
+          "name": "Nome",
+          "new_password": "Nova Senha",
+          "new_password_confirmation": "Confirme sua nova senha",
+          "old_password": "Senha antiga",
+          "password": "Senha",
+          "password_confirmation": "Confirme sua senha",
+          "phone": "Telefone"
+        }
       },
-      "before": "O campo :attribute deve conter uma data anterior a :date.",
-      "before_or_equal": "O campo :attribute deve conter uma data inferior ou igual a :date.",
+      "before": "O campo :attribute dever\xE1 conter uma data anterior a :date.",
+      "before_or_equal": "O campo :attribute deve ser igual ou anterior a :date.",
       "between": {
-        "array": "O campo :attribute deve conter de :min a :max itens.",
-        "file": "O campo :attribute deve conter um arquivo de :min a :max kilobytes.",
-        "numeric": "O campo :attribute deve conter um n\xFAmero entre :min e :max.",
-        "string": "O campo :attribute deve conter entre :min a :max caracteres."
+        "array": "O campo :attribute precisar ter entre :min - :max itens.",
+        "file": "O campo :attribute dever\xE1 ter um tamanho entre :min - :max kilobytes.",
+        "numeric": "O campo :attribute dever\xE1 ter um valor entre :min - :max.",
+        "string": "O campo :attribute dever\xE1 conter entre :min - :max caracteres."
       },
-      "boolean": "O campo :attribute deve conter o valor verdadeiro ou falso.",
+      "boolean": "O campo :attribute dever\xE1 ter o valor verdadeiro ou falso.",
       "confirmed": "A confirma\xE7\xE3o para o campo :attribute n\xE3o coincide.",
       "custom": {
         "attribute-name": {
-          "rule-name": "custom-message"
+          "rule-name": "mensagem-customizada"
         }
       },
       "date": "O campo :attribute n\xE3o cont\xE9m uma data v\xE1lida.",
-      "date_equals": "O campo :attribute deve ser uma data igual a :date.",
-      "date_format": "A data informada para o campo :attribute n\xE3o respeita o formato :format.",
-      "different": "Os campos :attribute e :other devem conter valores diferentes.",
-      "digits": "O campo :attribute deve conter :digits d\xEDgitos.",
-      "digits_between": "O campo :attribute deve conter entre :min a :max d\xEDgitos.",
-      "dimensions": "O valor informado para o campo :attribute n\xE3o \xE9 uma dimens\xE3o de imagem v\xE1lida.",
-      "distinct": "O campo :attribute cont\xE9m um valor duplicado.",
+      "date_format": "A data indicada para o campo :attribute n\xE3o respeita o formato :format.",
+      "different": "Os campos :attribute e :other dever\xE3o conter valores diferentes.",
+      "digits": "O campo :attribute dever\xE1 conter :digits d\xEDgitos.",
+      "digits_between": "O campo :attribute dever\xE1 conter entre :min a :max d\xEDgitos.",
+      "dimensions": "O :attribute possui dimens\xF5es inv\xE1lidas para a imagem.",
+      "distinct": "O campo :attribute possui um valor duplicado.",
       "email": "O campo :attribute n\xE3o cont\xE9m um endere\xE7o de email v\xE1lido.",
       "exists": "O valor selecionado para o campo :attribute \xE9 inv\xE1lido.",
-      "file": "O campo :attribute deve conter um arquivo.",
+      "file": "O :attribute deve ser um arquivo.",
       "filled": "O campo :attribute \xE9 obrigat\xF3rio.",
-      "gt": {
-        "array": "O campo :attribute deve ter mais que :value itens.",
-        "file": "O arquivo :attribute deve ser maior que :value kilobytes.",
-        "numeric": "O campo :attribute deve ser maior que :value.",
-        "string": "O campo :attribute deve ser maior que :value caracteres."
-      },
-      "gte": {
-        "array": "O campo :attribute deve ter :value itens ou mais.",
-        "file": "O arquivo :attribute deve ser maior ou igual a :value kilobytes.",
-        "numeric": "O campo :attribute deve ser maior ou igual a :value.",
-        "string": "O campo :attribute deve ser maior ou igual a :value caracteres."
-      },
-      "image": "O campo :attribute deve conter uma imagem.",
+      "image": "O campo :attribute dever\xE1 conter uma imagem.",
       "in": "O campo :attribute n\xE3o cont\xE9m um valor v\xE1lido.",
       "in_array": "O campo :attribute n\xE3o existe em :other.",
-      "integer": "O campo :attribute deve conter um n\xFAmero inteiro.",
-      "ip": "O campo :attribute deve conter um IP v\xE1lido.",
-      "ipv4": "O campo :attribute deve conter um IPv4 v\xE1lido.",
-      "ipv6": "O campo :attribute deve conter um IPv6 v\xE1lido.",
-      "json": "O campo :attribute deve conter uma string JSON v\xE1lida.",
-      "lt": {
-        "array": "O campo :attribute deve ter menos que :value itens.",
-        "file": "O arquivo :attribute ser menor que :value kilobytes.",
-        "numeric": "O campo :attribute deve ser menor que :value.",
-        "string": "O campo :attribute deve ser menor que :value caracteres."
-      },
-      "lte": {
-        "array": "O campo :attribute n\xE3o deve ter mais que :value itens.",
-        "file": "O arquivo :attribute ser menor ou igual a :value kilobytes.",
-        "numeric": "O campo :attribute deve ser menor ou igual a :value.",
-        "string": "O campo :attribute deve ser menor ou igual a :value caracteres."
-      },
+      "integer": "O campo :attribute dever\xE1 conter um n\xFAmero inteiro.",
+      "ip": "O campo :attribute dever\xE1 conter um IP v\xE1lido.",
+      "json": "O campo :attribute dever\xE1 conter uma string JSON v\xE1lida.",
       "max": {
-        "array": "O campo :attribute deve conter no m\xE1ximo :max itens.",
-        "file": "O campo :attribute n\xE3o pode conter um arquivo com mais de :max kilobytes.",
-        "numeric": "O campo :attribute n\xE3o pode conter um valor superior a :max.",
-        "string": "O campo :attribute n\xE3o pode conter mais de :max caracteres."
+        "array": "O campo :attribute deve ter no m\xE1ximo :max itens.",
+        "file": "O campo :attribute n\xE3o dever\xE1 ter um tamanho superior a :max kilobytes.",
+        "numeric": "O campo :attribute n\xE3o dever\xE1 conter um valor superior a :max.",
+        "string": "O campo :attribute n\xE3o dever\xE1 conter mais de :max caracteres."
       },
-      "mimes": "O campo :attribute deve conter um arquivo do tipo: :values.",
-      "mimetypes": "O campo :attribute deve conter um arquivo do tipo: :values.",
+      "mimes": "O campo :attribute dever\xE1 conter um arquivo do tipo: :values.",
       "min": {
-        "array": "O campo :attribute deve conter no m\xEDnimo :min itens.",
-        "file": "O campo :attribute deve conter um arquivo com no m\xEDnimo :min kilobytes.",
-        "numeric": "O campo :attribute deve conter um n\xFAmero superior ou igual a :min.",
-        "string": "O campo :attribute deve conter no m\xEDnimo :min caracteres."
+        "array": "O campo :attribute deve ter no m\xEDnimo :min itens.",
+        "file": "O campo :attribute dever\xE1 ter no m\xEDnimo :min kilobytes.",
+        "numeric": "O campo :attribute dever\xE1 ter um valor superior ou igual a :min.",
+        "string": "O campo :attribute dever\xE1 conter no m\xEDnimo :min caracteres."
       },
       "not_in": "O campo :attribute cont\xE9m um valor inv\xE1lido.",
-      "not_regex": "O formato do valor :attribute \xE9 inv\xE1lido.",
-      "numeric": "O campo :attribute deve conter um valor num\xE9rico.",
-      "present": "O campo :attribute deve estar presente.",
-      "regex": "O formato do valor informado no campo :attribute \xE9 inv\xE1lido.",
+      "not_regex": "The :attribute format is invalid.",
+      "numeric": "O campo :attribute dever\xE1 conter um valor num\xE9rico.",
+      "present": "O campo :attribute deve existir.",
+      "regex": "O formato do valor para o campo :attribute \xE9 inv\xE1lido.",
       "required": "O campo :attribute \xE9 obrigat\xF3rio.",
       "required_if": "O campo :attribute \xE9 obrigat\xF3rio quando o valor do campo :other \xE9 igual a :value.",
-      "required_unless": "O campo :attribute \xE9 obrigat\xF3rio a menos que :other esteja presente em :values.",
       "required_with": "O campo :attribute \xE9 obrigat\xF3rio quando :values est\xE1 presente.",
       "required_with_all": "O campo :attribute \xE9 obrigat\xF3rio quando um dos :values est\xE1 presente.",
-      "required_without": "O campo :attribute \xE9 obrigat\xF3rio quando :values n\xE3o est\xE1 presente.",
+      "required_without": "O campo :attribute \xE9 obrigat\xF3rio quanto :values n\xE3o est\xE1 presente.",
       "required_without_all": "O campo :attribute \xE9 obrigat\xF3rio quando nenhum dos :values est\xE1 presente.",
-      "same": "Os campos :attribute e :other devem conter valores iguais.",
+      "same": "Os campos :attribute e :other dever\xE3o conter valores iguais.",
       "size": {
-        "array": "O campo :attribute deve conter :size itens.",
-        "file": "O campo :attribute deve conter um arquivo com o tamanho de :size kilobytes.",
-        "numeric": "O campo :attribute deve conter o n\xFAmero :size.",
-        "string": "O campo :attribute deve conter :size caracteres."
+        "array": "O campo :attribute deve ter :size itens.",
+        "file": "O campo :attribute dever\xE1 ter o tamanho de :size kilobytes.",
+        "numeric": "O campo :attribute dever\xE1 conter o valor :size.",
+        "string": "O campo :attribute dever\xE1 conter :size caracteres."
       },
-      "starts_with": "O campo :attribute deve come\xE7ar com um dos seguintes valores: :values",
       "string": "O campo :attribute deve ser uma string.",
-      "timezone": "O campo :attribute deve conter um fuso hor\xE1rio v\xE1lido.",
-      "unique": "O valor informado para o campo :attribute j\xE1 est\xE1 em uso.",
-      "uploaded": "Falha no Upload do arquivo :attribute.",
-      "url": "O formato da URL informada para o campo :attribute \xE9 inv\xE1lido.",
-      "uuid": "O campo :attribute deve ser um UUID v\xE1lido."
+      "timezone": "O campo :attribute dever\xE1 ter um fuso hor\xE1rio v\xE1lido.",
+      "unique": "O valor indicado para o campo :attribute j\xE1 se encontra utilizado.",
+      "url": "O formato da URL indicada para o campo :attribute \xE9 inv\xE1lido."
     }
   });
 })();
