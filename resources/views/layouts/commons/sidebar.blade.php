@@ -8,6 +8,12 @@
                 </a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link" href="https://coreui.io/docs/getting-started/introduction/">
+                    <i class="nav-icon cui-file"></i> @lang('navs.general.docs')
+                </a>
+            </li>
+
         </ul>
     </nav>
     <button class="sidebar-minimizer brand-minimizer" type="button"></button>

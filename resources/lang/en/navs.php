@@ -14,6 +14,7 @@ return [
 
     'general' => [
         'home' => 'Home',
+        'docs' => 'Documentation',
         'logout' => 'Logout',
     ],
     'breadcrumbs' => [
